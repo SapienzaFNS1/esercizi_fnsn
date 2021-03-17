@@ -4,7 +4,8 @@
 \usepackage{hyperref}
 \usepackage{graphicx}
 \usepackage{amsmath}
-\usepackage[noanswer]{exercise}
+%\usepackage[noanswer]{exercise}
+\usepackage{exercise}
 \usepackage{siunitx}
 
 \newcommand{\vett}[1]{\ensuremath{\textbf{#1}}}
@@ -38,151 +39,7 @@ Valerio Ippolito,\footnote{\href{mailto:valerio.ippolito@roma1.infn.it}{valerio.
 
 \maketitle
 
-\begin{Exercise}[title={Applicazione delle trasformazioni di Lorentz}]
-  Un osservatore $S$ unidimensionale, posizionato sull'asse \textit{x}, vede un lampo rosso a $x_R=\SI{1210}{m}$ e,
-  dopo un tempo di 4.96\,$\mu s$, un lampo blu a $x_B=\SI{480}{m}$.
-  \begin{enumerate}
-    \item Qual \`e la velocit\`a di $S$ per un osservatore $S'$ che vede accadere gli eventi nello stesso punto?
-    \item Quale evento avviene prima, secondo $S'$, e qual \`e
-      l'intervallo temporale misurato da lui tra i due lampi di luce?
-      (\textit{Suggerimento:} provare a calcolarlo usando le
-      trasformazioni di Lorentz, oppure calcolarlo usando l'intervallo
-      spazio-temporale.
-  \end{enumerate}
-\end{Exercise}
-\begin{Answer}
-  \begin{enumerate}
-    \item L'osservatore $S'$ sta viaggiando a una velocit\`a $v$, tale che vede il lampo rosso (evento $R$) e
-      poi arriva in $B$ esattamente nel momento in cui avviene il lampo blu. Quindi nel suo sistema di riferimento:
-      \begin{align*}
-        &x'_R = x'_B \\
-        &x_R - vt_R = x_B - vt_B,
-      \end{align*}
-      e quindi
-      \begin{equation*}
-        v = \frac{x_R - x_B}{t_R-t_B} =
-        \frac{\SI{1210}{m} - \SI{480}{m}}{0-\SI{4.96e-6}{s}} =
-        \SI{-1.47e8}{m/s}
-      \end{equation*}
+%\input{esercitazione-02}
+\input{esercitazione-03}
 
-    \item Sebbene la misura degli intervalli temporali possa cambiare
-      nel passare da $S$ a $S'$, l'ordine degli eventi deve essere lo
-      stesso in qualsiasi sistema di riferimento. Quindi l'osservatore in $S'$ vede l'evento R avvenire prima dell'evento B.
-
-      Adesso troviamo l'intervallo temporale in $S'$, che si muove a
-      velocit\`a $v=\SI{-1.47e8}{m/s}$ rispetto a $S$. Applicando le
-      trasformazioni di Lorentz abbiamo:
-      \begin{align*}
-        t'_R &= \gamma\left(t_R-\frac{v}{c^2}x_R\right) = \frac{1}{\sqrt{1-\left(\frac{\SI{1.47e8}{m/s}}{\SI{3e8}{m/s}}\right)^2}}
-        \left[0-\frac{\SI{-1.47e8}{m/s}}{(\SI{3e8}{m/s})^2}(\SI{1210}{m})\right]=\SI{2.27}{\mu s} \\
-        t'_B &= \gamma\left(t_B-\frac{v}{c^2}x_B\right) = \frac{1}{\sqrt{1-\left(\frac{\SI{1.47e8}{m/s}}{\SI{3e8}{m/s}}\right)^2}}
-        \left[\SI{4.96e-6}{s}-\frac{\SI{-1.47e8}{m/s}}{(\SI{3e8}{m/s})^2}(\SI{480}{m})\right]=\SI{6.59}{\mu s} \\
-      \end{align*}
-      Quindi l'evento $R$ accade prima dell'evento $B$, con una
-      differenza temporale $\Delta r'= t'_B-t'_R=\SI{4.32}{\mu s}$.
-
-      Possiamo anche calcolare $\Delta t'$ usando l'intervallo
-      invariante dello spazio tempo, tenendo conto del fatto che in
-      $S'$ i due eventi accadono nello stesso punto dello spazio
-      (i.e. $\Delta x'=0$):
-      \begin{align*}
-        &(c\Delta t')^2-(\Delta x')^2 = (c\Delta t')^2 = (c\Delta t')^2 = (c\Delta t)^2-(\Delta x)^2 \\
-        \Delta t' &= \sqrt{(\Delta t)^2-\left(\frac{\Delta x}{c}\right)^2} \\
-        & = \sqrt{ \SI{4.96e-6}{s}^2 - \left( \frac{\SI{1210}{m}-\SI{480}{m}}{\SI{3e8}{m/s}} \right)^2} = \SI{4.32}{\mu s}
-      \end{align*}
-      ottenendo lo stesso valore che avevamo trovato con le trasformazioni di Lorentz.
-  \end{enumerate}
-\end{Answer}
-
-\begin{Exercise}[title={Contrazione delle lunghezze}]
-  Un osservatore misura la lunghezza di un'asta quando questa \`e a
-  riposo, ottenendo $L=\SI{1}{m}$, e quando \`e in moto, ottenendo
-  $L'=\SI{0.5}{m}$. A che velocit\`a viaggia l'asta quando \`e in moto?
-\end{Exercise}
-\begin{Answer}
-La lunghezza a riposo \`e legata alla lunghezza misurata quando l'asta \`e
-in movimento dalla relazione $L=L'/\gamma$, per cui $\gamma=2$. La
-velocit\`a dell'asta \`e dunque
-\begin{align*}
-    \gamma &= \frac{1}{\sqrt{1-\beta^2}} = 2\\
-    \frac{1}{2} &= \sqrt{1-\beta^2}\\
-    \beta^2&=\frac{v^2}{c^2} = \frac{3}{4}\\
-    v &= \frac{\sqrt{3}}{4}c=\SI{2.6e8}{m/s}.
-\end{align*}
-\end{Answer}
-
-
-\begin{Exercise}[title={Decadimento e dilatazione dei tempi}]
-Met\`a dei muoni di un fascio composto da muoni di energia fissata
-sopravvive dopo aver viaggiato $l=\SI{600}{m}$ nel sistema di
-riferimento del laboratorio. Qual è la velocità dei muoni, conoscendo la vita media del muone $\tau_0=\SI{2.2}{\mu s}$?
-\end{Exercise}
-\begin{Answer}
-La legge di decadimento dei muoni \`e di tipo esponenziale, e quindi:
-\begin{equation*}
-    \frac{N}{N_0} = \exp\left(-\frac{t}{\tau}\right) = \exp\left(-\frac{vt}{v\tau}\right)=\exp\left(-\frac{l}{\beta c\gamma \tau_0}\right)=\frac{1}{2}
-\end{equation*}
-da cui segue che
-\begin{align*}
-    -\log\frac{1}{2}&=\frac{l}{\beta\gamma c\tau_0}\\
-    \beta\gamma&=\frac{\beta}{\sqrt{1-\beta^2}} = -\frac{l}{\log\frac{1}{2}c\tau_0}\equiv\lambda,
-\end{align*}
-ed elevando al quadrato
-\begin{equation*}
-    \beta=\sqrt{\frac{\lambda^2}{1+\lambda^2}}\approx 0.80.
-\end{equation*}
-\end{Answer}
-
-
-\begin{Exercise}[title={Composizione relativistica delle velocit\`a e contrazione delle lunghezze}]
-  Due razzi, di lunghezza a riposo $L_0$, si avvicinano alla Terra da direzioni opposte, con velocit\`a $\pm c/2$. Quanto appare lungo un razzo all'altro razzo?
-\end{Exercise}
-\begin{Answer}
-  Mettiamoci nel SR di uno dei razzi (razzo 1) e calcoliamo quanto
-  viaggia velocemente l'altro (razzo 2) rispetto al SR del razzo 1.
-  Il testo ci dice che nel sistema della Terra, il razzo 1 ha
-  velocit\`a $c/2$ e il razzo 2 ha velocit\`a $-c/2$. Applicando la
-  composizione delle velocit\`a, e indicando con l'apice il SR del razzo 1 nel quale vogliamo misurare la velocit\`a:
-  \begin{equation*}
-    v_2' = \frac{(v_2-v_1)}{1-v_1v_2/c^2} = \frac{(-c/2)-(c/2)}{1-(c/2)(-c/2)/c^2} = -\frac{4}{5}c,
-  \end{equation*}
-  quindi il razzo 2 appare come se si stia avvicinando a $0.8c$. Una volta nota la velocit\`a del razzo 2 nel SR del razzo 1, la
-  contrazione delle lunghezze di Lorentz d\`a:
-  \begin{equation*}
-    L' = \frac{L_0}{\gamma} = L_0\sqrt{1-\left(\frac{4}{5}\right)^2} = \frac{3}{5}L_0.
-  \end{equation*}
-\end{Answer}
-
-\begin{Exercise}[title={Il decadimento del muone, visto dal muone}]
-  Il muone, indicato con $\mu$, \`e una particella instabile che
-  decade con un tempo proprio (vita media per il muone a riposo)
-  $\tau_0=\SI{2.2}{\mu s}$. Se viene prodotto all'inizio
-  dell'atmosfera per la collisione di raggi cosmici energetici con
-  particelle nelle molecole d'aria. Se assumiamo che i muoni vengano
-  prodotti all'inizio dell'atmosfera tutti a un'altezza di
-  \SI{10}{km}, e hanno una velocit\`a $v=0.999c$, in media i muoni
-  raggiungono la superficie della Terra prima di decadere?
-\end{Exercise}
-\begin{Answer}
-  In classe abbiamo svolto l'esercizio dal punto di vista (sistema di riferimento) della Terra.
-  In quel caso il muone viaggia per una distanza media $d = v\gamma\tau_0$ prima di decadere, cio\`e:
-  \begin{equation*}
-    d = v\gamma\tau = \frac{(\SI{2.997e8}{m/s})(\SI{2.2e-6}{s})}{\sqrt{1-\left(\frac{\SI{2.997e8}{m/s}}{\SI{3e8}{m/s}}\right)^2}} = \SI{14.5}{km}
-  \end{equation*}
-  Quindi con un fattore:
-  \begin{equation*}
-    \gamma = \frac{1}{\sqrt{1-\left(\frac{\SI{2.997e8}{m/s}}{\SI{3e8}{m/s}}\right)^2}} \simeq 22
-  \end{equation*}
-  invece che la breve distanza $d'=v\tau_0=\SI{660}{m}$ che penseremmo, non tenendo conto della dilatazione dei tempi.
-
-  E nel sistema di riferimento del muone? Nel SR solidale con il muone, \`e l'atmosfera a viaggiare con $v_{atm}=0.999c$ e quindi il suo spessore si
-  contrae di un fattore $\gamma \ simeq 22$, e quindi la lunghezza misurata da lui \`e:  
-  \begin{equation*}
-    L' = \frac{L_{atm}}{\gamma} = \frac{\SI{15e3}{m}}{22}  = \SI{450}{m}
-  \end{equation*}
-  Il muone, che vive in media un tempo $\tau_0$, pu\`o volare per una
-  distanza media pari a $c\tau_0=\SI{660}{m}$, che per lui \`e
-  maggiore dello spessore dell'atmosfera, e quindi pu\`o raggiungere
-  terra prima di decadere.
-\end{Answer}
 \end{document}
