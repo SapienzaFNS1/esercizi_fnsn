@@ -1,0 +1,284 @@
+%%%%%%%%%%%%%%%%%%%%%%%%
+%%% ESERCITAZIONE 4
+%%% FATTA IL 19/03/2021
+%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{Exercise}[title={Unit\`a di misura}]
+Usando il fatto che $\hbar c = \SI{197.3}{MeV fm}$, si dimostri che in un sistema di unità di misura in cui $\hbar=c=1$ vale:
+\Question $\SI{1}{GeV^{-2}}=\SI{0.389}{mb}$
+\Question $\SI{1}{m}=\SI{5.068e15}{GeV^{-1}}$
+\Question $\SI{1}{s}=\SI{1.5e24}{GeV^{-1}}$
+\end{Exercise}
+Ricordiamo che $\SI{1}{b} = \SI{1e-28}{m^2}$ e che 
+\begin{equation*}
+    [\hbar c]=[\si{J s} \si{m/s}] = [E][L].
+\end{equation*}
+\begin{Answer}
+L'idea è di capire per quale potenza di $\hbar c$ e $c$ va moltiplicato il termine a sinistra di ciascuna equazione, per ottenere il termine di destra. 
+
+Per cui:
+\begin{itemize}
+    \item $[ \SI{1}{GeV^{-2}} ] [\hbar c]^\alpha = [E]^{-2} [E] ^\alpha [L]^\alpha = [\SI{0.389}{mb}] = [L]^2$, da cui segue $\alpha=2$ e $\SI{1}{GeV^{-2}}(\hbar c)^2=\frac{\SI{197.3}{MeV fm}}{\SI{1}{GeV}} = \left(\frac{\SI{0.1973e-15}{GeV m}}{\SI{1}{GeV}}\right)^2=\SI{0.389}{mb}$;
+
+    \item $[ \SI{1}{m} ] [\hbar c]^\alpha = [L] [E] ^\alpha [L]^\alpha = [\SI{5.068e15}{GeV^{-1}}] = [E]^{-1}$, da cui segue $\alpha=-1$ e $\SI{1}{m}(\hbar c)^{-1}=\frac{\SI{1}{m}}{\SI{197.3}{MeV fm}} = \frac{\SI{1}{m}}{\SI{0.1973e-15}{GeV m}}=\SI{5.068e15}{GeV^{-1}}$;
+    
+    \item $[ \SI{1}{s} ] [\hbar c]^\alpha[c]^\beta  = [T] [E] ^\alpha [L]^\alpha [L]^\beta [T]^{-\beta} = [T] [E]^\alpha [L]^{\alpha+\beta} [T]^{-\beta} = [\SI{1.5e24}{GeV^{-1}}] = [E]^{-1}$, da cui segue $\alpha=-1, \beta=1$ e $\SI{1}{s}(\hbar c)^{-1}c=\frac{\SI{1}{s}}{\SI{197.3}{MeV fm}}\SI{299 792 458}{m/s} 
+    = \frac{\SI{299 792 458}{m}}{\SI{0.1973e-15}{GeV m}} = \SI{1.5e24}{GeV^{-1}}$.
+\end{itemize}
+\end{Answer}
+
+
+\begin{Exercise}[title={Energia di soglia di una reazione}]
+  Nell’urto protone-nucleo calcolare l’energia cinetica di soglia
+  minima e massima per la reazione protone su protone di un nucleo di
+  rame:
+  \begin{equation*}
+    p_1 + p_2 \to p + p + \pi^+ \pi^-
+  \end{equation*}
+  sapendo che il moto di Fermi del protone nel nucleo-bersaglio ha un
+  impulso medio di $p_F = \SI{0.240}{GeV/c}$ e che la massa del pione
+  carico \`e: $m(\pi^\pm =\SI{0.140}{GeV/c^2}$ e la massa del protone
+  \`e $m_p= \SI{0.938}{GeV/c^2}$.
+\end{Exercise}
+
+\begin{Answer}
+L'impulso di Fermi regola il moto dei nucleoni (protoni e neutroni)
+all'interno dei nuclei. Se lo trascuriamo l’energia cinetica di soglia
+per la reazione è pari a:
+\begin{equation*}
+K_1 = \frac{(2m_p + 2m_\pi)^2-(2m_p)^2}{2m_p} = 4m_\pi + \frac{2m_\pi^2}{m_p} = \SI{0.602}{GeV}
+\end{equation*}
+L'energia totale \`e la somma di energia cinetica e della massa della particella prodotta:
+\begin{equation*}
+E_1 = K_1 + m_p = \SI{1.540}{GeV}
+\end{equation*}
+
+Considerando invece il moto del protone legato nel nucleo di rame,
+moto diretto casualmente rispetto alla direzione del protone
+incidente, si ha l’energia di soglia minima (massima) quando l’impulso
+di Fermi del protone del nucleo è antiparallelo (parallelo) alla
+direzione del protone incidente.
+
+Conviene calcolare la massa invariante nel sistema del laboratorio:
+\begin{equation*}
+  \sqrt{s} = \sqrt{(E_1+E_2)^2-\abs{\vec p_1+\vec p_2}^2} = \sqrt{(E_1+E_2)^2-(p_1+p_F)^2} =
+  \sqrt{2m_p^2 + 2E_1E_2 \pm 2p_1p_F}
+\end{equation*}
+l'energia del protone nel nucleo \`e $E_2 = \sqrt{m_p^2+m_F^2}=\SI{968}{MeV}$.
+L'energia di soglia nel centro di massa \`e quando tutte le particelle dello stato finale sono ferme. Quindi \`e:
+\begin{equation*}
+\sqrt{s}= 2m_p+2m_\pi
+\end{equation*}
+Usando l'uguaglianza della massa invariante nello stato iniziale e finale:
+\begin{eqnarray*}
+  E_1E_2\pm p_1p_F = 2(m_p+m_\pi)^2-m_p^2 \\
+  E_1E_2 - 2(m_p+m_\pi)^2 + m_p^2 = \pm p_F\sqrt{E_1^2-m_p^2}
+\end{eqnarray*}
+La parte $2(m_p+m_\pi)^2 + m_p^2$ \`e una costante, e vale $A=\SI{1.444}{GeV^2}$. Sostituendola:
+\begin{eqnarray*}
+  E_1E_2 - A =  \pm p_F\sqrt{E_1^2-m_p^2} \\
+  p_F^2E_1^2 - p_F^2m_p^2 = E_1^2E_2^2 + A^2-2AE_1E_2 \\
+  E_1^2(E_2^2-p_F^2) - 2AE_2E_1 + p_F^2m_p^2 + A^2=0
+\end{eqnarray*}
+
+e usando $E_2^2-p_F^2=m_p^2$ si trova:
+\begin{eqnarray*}
+  E_1^2m_p^2 - 2AE_1E_2 + p_F^2m_p^2+A^2 = 0 \\
+  E_1^2-\frac{2AE_2}{m_p^2}E_1 + \frac{A^2}{m_p^2}+p_F^2=0
+\end{eqnarray*}
+Questa \`e un'equazione di secondo grado che ha soluzioni:
+\begin{equation*}
+  E_1 = \frac{AE_2}{m_p^2} \pm \sqrt{\left(\frac{AE_2}{m_p^2}\right)^2-\frac{A^2}{m_p^2}-p_F^2}
+\end{equation*}  
+Usando $E_2=\SI{968}{MeV}$ si ricavano i due valori di energia di soglia massimo e  minimo:
+\begin{eqnarray*}
+E_1^{max} \approx \SI{1.3}{GeV} \\
+E_1^{min} \approx \SI{1.9}{GeV}
+\end{eqnarray*}
+Da cui si ricavano anche le energie cinetiche minime e massime:
+\begin{eqnarray*}
+K_1^{max} = E_1^{max} - m_p \approx \SI{1}{GeV} \\
+K_1^{min} = E_1^{min} - m_p \approx \SI{0.3}{GeV} \\
+\end{eqnarray*}
+
+\end{Answer}
+
+
+
+\begin{Exercise}[title={Energia di soglia di una reazione su bersaglio e collisore}]
+  Calcolare l’energia di soglia per la reazione:
+  \beq
+  e^+e^- \to \mu^+\mu^-
+  \eeq
+  \Question su bersaglio fisso
+  \Question in collisioni $e^+e^-$ con fasci di pari energia
+\end{Exercise}
+\begin{Answer}
+  
+Per la reazione su bersaglio fisso.
+Come di frequente, usiamo due sistemi di riferimento diversi. Nello stato iniziale, considerando i quadrimpulsi nel laboratorio la massa invariante \`e:
+\beq
+\sqrt{s} = \sqrt{2m_e^2 + 2 E_1m_e}
+\eeq
+Nello stato finale, alla soglia (muoni fermi) si ha:
+\beq
+\sqrt{s} = 2m_\mu
+\eeq
+Uguagliando le due espressioni per la massa invariante si ottiene $E_1 = \SI{44}{GeV}$ alla soglia.
+
+Per la reazione in collisioni $e^+e^-$ con fasci di pari energia, il sistema del centro di massa coincide con quello del laboratorio.
+Nello stato iniziale:
+\beq
+\sqrt{s} = 2E_e
+\eeq
+Nello stato finale, alla soglia (ancora una volta, muoni fermi) si ha:
+\beq
+\sqrt{s} = 2m_\mu
+\eeq
+Uguagliando le due espressioni per la massa invariante si ottiene $E_e = m_\mu = \SI{0.106}{GeV}$ alla soglia.
+Notare la grandissima differenza di energia necessaria per il fascio di elettroni nel primo e nel secondo caso.
+
+\end{Answer}
+
+\begin{Exercise}[title={Energia di soglia e decadimento in due corpi}]
+  Si consideri la collisione frontale tra un fascio di protoni ed uno
+  di elettroni, di pari impulso p nel sistema di riferimento del
+  laboratorio, che produce la reazione:
+  \beq
+  e^- + p \to \Lambda + \nu_e
+  \eeq
+  \Question Determinare l’energia dell’elettrone quando la reazione e`
+  prodotta a soglia con $\Lambda \to p \pi^-$.
+  \Question Determinare l’impulso del protone e del pione, prodotti dal decadimento della
+  $\Lambda$, nel sistema di riferimento in cui la $\Lambda$ \`e in quiete
+  [$m_e = \SI{0.511}{MeV/c^2}$, $m_p = \SI{938.3}{MeV/c^2}$, $m_\Lambda = \SI{1115.7}{MeV/c^22}$, $m_\pi = {139.6}{MeV/c^2}$]
+\end{Exercise}
+\begin{Answer}
+  Il sistema del laboratorio coincide col sistema del centro di massa. L’impulso di soglia si ricava quindi imponendo:
+  \beq
+  \sqrt{s}=\sqrt{p^2+m_e^2}+\sqrt{p^2+m_p^2}=m_\Lambda
+  \eeq
+  Elevando al quadrato si ha:
+  \beq
+  p^2+m_e^2+p^2+m_p^2+2\sqrt{(p^2+m_e^2)(p^2+m_p^2)}=m_\Lambda^2 \\
+  \eeq
+  Conviene portare al secondo membro la radice:
+  \beq
+  2p^2+m_e^2+m_p^2 - m_\Lambda^2 = 2\sqrt{(p^2+m_e^2)(p^2+m_p^2)}
+  \eeq
+  e poi elevando al quadrato:
+  \beq
+  4p^4+m_e^4+m_p^4+m_\Lambda^4+4p^2m_e^2+4p^2m_p^2-4p^2m_\Lambda^2 - 2m_e^2m_p^2-2m_e^2m_\Lambda^2-2m_p^2m_\Lambda^2 =
+  4p^4+4p^2m_p^2+4p^2m_e^2+4m_e^2m_p^2
+  \eeq
+  si ottiene:
+  \beq
+  p^2=\frac{m_e^4+m_p^4+m_\Lambda^4-2me^2m_p^2-2m_e^2m\Lambda^2-2m_p^2m_\Lambda^2}{4m_\Lambda^2}
+  \eeq
+  e quindi il valore di $p=\SI{163}{MeV/c}$, da cui l'energia $E_e=pc=\SI{163}{MeV}$.
+
+  Nel caso del successivo decadimento in due corpi $\Lambda\to p\pi^-$, si ottiene l'energia del protone, nel sistema di
+  riferimento del centro di massa, usando la formula:
+  \beq
+  E_p^* = \frac{m_\Lambda^2+m_p^2-m_\pi^2}{2m_\Lambda} = \SI{944}{MeV}
+  \eeq
+  L'impulso del protone \`e quindi dato da:
+  \beq
+  p_p^* = \sqrt{{E_p^*}^2-m_p^2}=\SI{100}{MeV/c}
+  \eeq
+  Siccome nel centro di massa, per definizione, la somma vettoriale
+  degli impulsi \`e nulla, l'impulso del pione carico bilancia quello
+  del protone, emesso in direzione opposta, e quindi $p_\pi^*=p_p^* =\SI{100}{MeV/c}$.
+\end{Answer}
+
+\begin{Exercise}[title={Diffusione elastica di un fotone su un bersaglio}]
+Chiamiamo elastico un urto (``scattering'') in cui le particelle dello
+stato iniziale e dello stato finale sono le stesse. Si consideri un
+urto elastico fra una particella di massa nulla e una particella di
+massa $m$ (\emph{bersaglio}) che si trova a riposo nel sistema di
+riferimento del laboratorio: qual è la massima energia trasferita
+dalla particella incidente al bersaglio? \emph{Suggerimento: si lavori
+nel sistema di riferimento del laboratorio, e si espliciti il prodotto
+scalare fra gli impulsi spaziali della particella di massa nulla prima
+e dopo l'urto in funzione dell'angolo, sempre nel sistema di
+riferimento del laboratorio, fra la direzione iniziale e finale della
+particella incidente.}
+
+Se la particella incidente è un fotone e il bersaglio è un elettrone atomico a riposo, di quanto varia la lunghezza d'onda del fotone fra prima e dopo l'urto?
+\end{Exercise}
+
+\begin{Answer}
+Per scattering elastico intendiamo un processo in cui le particelle dello stato iniziale sono le stesse di quelle dello stato finale.
+
+Denotiamo con $\quadriv{k}$ e $\quadriv{P}$ i quadrimpulsi della particella incidente e del bersaglio prima dell'urto, e indichiamo con l'apice le stesse quantità dopo l'urto: il problema ci dice che
+\begin{align*}
+    \quadriv{k} = (E, \vett{k}),\\
+    \quadriv{k'} = (E', \vett{k'}),\\
+    \quadriv{P} = (mc, \vett{0}).\\
+\end{align*}
+Partiamo dalla conservazione del quadrimpulso durante l'urto, isoliamo la quantità che non misuriamo direttamente -- cioè il quadrimpulso del bersaglio dopo l'urto, $\quadriv{P'}$ -- ed eleviamo al quadrato:
+\begin{align*}
+    \quadriv{k} + \quadriv{P} = \quadriv{k'} + \quadriv{P'},\\
+    \quadriv{P'} = \quadriv{k} + \quadriv{P} - \quadriv{k'},\\
+    m^2c^2 = 0 + m^2c^2 + 0 + 2Em-2(EE'-\vett{k}\cdot\vett{k'})-2mE',
+\end{align*}
+e se indichiamo con $\theta'$ l'angolo -- nel riferimento del laboratorio -- fra la direzione iniziale e finale della particella incidente, e usiamo il fatto che $|\vett{k}|c = E$ e $|\vett{k'}|c = E'$,
+\begin{align*}
+    0= 2mc^2(E-E')-2(EE'-EE'\cos\theta'),\\
+    mc^2(E'-E) = -EE'(1-\cos\theta'),\\
+    E'(mc^2 + E(1-\cos\theta')) = mc^2E,\\
+    E' = \frac{E}{1 + \frac{E}{mc^2}(1-\cos\theta')}.
+\end{align*}
+Il bersaglio rinculerà di una energia $E-E'$, massima per $\theta=\pi$. Il valore massimo di quest'energia di rinculo,
+\begin{equation*}
+    E-\frac{E}{1+2\frac{E}{mc^2}} = E\frac{2E/mc^2}{1+2E/mc^2},
+\end{equation*}
+prende il nome -- nel caso dello scattering Compton, in cui la particella incidente è un fotone e il bersaglio è un elettrone atomico -- di \emph{picco Compton}.
+
+Cosa cambia fra un fotone di energia $E$ ed uno di energia $E'$? Dalla meccanica quantistica,
+\begin{equation*}
+    E = h\nu = \frac{hc}{\lambda},
+\end{equation*}
+cioè cambia la lunghezza d'onda del fotone:
+\begin{align*}
+    E' = \frac{hc}{\lambda'} = \frac{\frac{hc}{\lambda}}{1+\frac{\frac{hc}{\lambda}}{mc^2}(1-\cos\theta')},\\
+    \frac{1}{\lambda'} = \frac{\frac{1}{\lambda}}{1+\frac{\frac{hc}{\lambda}}{mc^2}(1-\cos\theta')},\\
+    \lambda' = {\lambda}\left(1+\frac{hc}{\lambda mc^2}(1-\cos\theta')\right),\\
+    \lambda' = \lambda + \frac{h}{m c}(1-\cos\theta')\equiv \lambda + \lambda_c(1-\cos\theta').
+\end{align*}
+dove abbiamo definito la \emph{lunghezza d'onda Compton} dell'elettrone, $\lambda_c$, che rappresenta la scala di lunghezza sotto la quale gli effetti della meccanica quantistica relativistica divengono importanti.
+\end{Answer}
+
+\begin{Exercise}[title={Scattering Rutherford}]
+Un fascio di particelle $\alpha$ di \SI{100}{MeV} di energia e \SI{0.32}{nA} di corrente\footnote{Per una spiegazione breve su come (e perché) si misura la corrente di un fascio di particelle, vedi \url{https://www.lhc-closer.es/taking_a_closer_look_at_lhc/0.beam_current}. Una trattazione più completa è data ad esempio da \url{https://cds.cern.ch/record/1213275/files/p141.pdf}.} collide contro un bersaglio fisso di alluminio, spesso \SI{1}{cm}. Una sperimentatrice prende un rivelatore di $\SI{1}{cm}\times\SI{1}{cm}$ di superficie, e lo posiziona ad un angolo di \ang{30} rispetto al fascio di particelle, a \SI{1}{m} di distanza dal bersaglio. Quante particelle $\alpha$ incideranno sul rivelatore ogni secondo?
+\end{Exercise}
+\begin{Answer}
+L'alluminio ha una densità di \SI{2.7}{g/cm^3}, numero atomico $13$ e massa atomica \SI{27}{u}.
+
+Poiché le particelle $\alpha$ sono nuclei di elio, hanno carica $2e$ e la corrente di \SI{0.32}{nA} corrisponde a un miliardo di particelle incidenti al secondo,
+\[
+\dv{N_i}{t}=\frac{\SI{0.32}{nC/s}}{2\times\SI{1.6e-19}{C}} = \SI{1e9}{s^{-1}}.
+\]
+
+Il rivelatore vede un angolo solido di
+\[
+\Delta\Omega\equiv \frac{\text{superficie}}{\text{raggio}}^2 = \frac{\SI{1}{cm^2}}{(\SI{1}{m})^2} = \SI{1e-4}{sr}
+\]
+
+Si tratta di uno scattering alla Rutherford, per cui la sezione d'urto per unità di angolo solido rilevata ad un certo angolo $\theta$ vale
+\[
+\dv{\sigma}{\Omega} = \left(\frac{z_{\alpha}z_{Al}e^2}{4\pi\epsilon_04E}\frac{1}{\sin^2(\theta/2)}\right)^2,
+\]
+pari a
+\begin{equation}\begin{split}
+\dv{\sigma}{\Omega} \approx \left(\frac{2\times13\times4\times e\times\SI{1.6e-19}{C}}{4\pi\times\SI{8.9e-12}{F/m}\times4\times\SI{100e6}{eV}}\frac{1}{\sin^2(\pi/\ang{180}\times\ang{30}/2)}\right)^2\\
+\approx \SI{2e-30}{m^2/sr}=\SI{20}{mb/sr},
+\end{split}\end{equation}
+e il numero di particelle visto dal rivelatore vale, se indichiamo con $n_{Al}=\rho_{Al}\frac{N_A}{A_{Al}}$ la densità numero di atomi di alluminio, e con $d$ lo spessore del rivelatore,
+\begin{equation*}
+\begin{split}
+&\dv{N_\text{rivelate}}{t}=\Delta\Omega\dv{\sigma}{\Omega}n_{Al}d \dv{N_\text{i}}{t}\\ 
+&\approx\SI{1e-4}{sr}\times \SI{2e-30}{m^2/sr} \times \SI{1e4}{cm^2/m^2}  \times \SI{2.7}{g/cm^3} \frac{\SI{6e23}{mol^{-1}}}{\SI{27}{g/mol}}\\&= \SI{120}{Hz}.
+\end{split}
+\end{equation*}
+\end{Answer}
