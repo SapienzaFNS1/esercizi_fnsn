@@ -1,0 +1,194 @@
+%%%%%%%%%%%%%%%%%%%%%%%%
+%%% ESERCITAZIONE 3
+%%% FATTA IL 10/03/2021
+%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{Exercise}[title={Energia cinetica}]
+Quanto lavoro bisogna compiere per aumentare la velocità di un elettrone ($m=\SI{511}{keV/c^2}$) dalla posizione di riposo a:
+\Question $0.50c$?
+\Question $0.990c$?
+\Question $0.9990c$?
+\end{Exercise}
+\begin{Answer}
+A questi elettroni dovremo dare una certa energia cinetica $K$, in modo da far passare l'energia totale da quella a riposo ($\gamma=0$), cio\`e
+\begin{equation*}
+    E_i = mc^2,
+\end{equation*}
+a
+\begin{equation*}
+    E_f = K + mc^2. 
+\end{equation*}
+notare che la massa dell'elettrone $m$ \`e la massa a riposo.
+Dalla relazione
+\begin{equation*}
+    E_f = m\gamma c^2
+\end{equation*}
+segue
+\begin{equation*}
+    K = E_f - mc^2 = m(\gamma - 1) c^2 = m\left(\frac{1}{\sqrt{1-\frac{v^2}{c^2}}}-1\right)c^2,
+\end{equation*}
+per cui nei tre casi indicati servono rispettivamente \SI{79}{keV}, \SI{3.1}{MeV} e \SI{10.9}{MeV}.
+\end{Answer}
+
+
+\begin{Exercise}[title={Energia cinetica}]
+Si calcoli la velocità di una particella in modo che
+\Question la sua energia cinetica sia il doppio della sua energia a riposo
+\Question la sua energia totale sia il doppio della sua energia a riposo
+\end{Exercise}
+\begin{Answer}
+Usiamo la relazione
+\begin{equation*}
+    E = m\gamma c^2 = K+mc^2 = m(\gamma -1)c^2 + mc^2,
+\end{equation*}
+assieme alla definizione
+\begin{equation*}
+    \gamma=\frac{1}{\sqrt{1-v^2/c^2}},
+\end{equation*}
+per cui si ha che
+\begin{equation*}
+    v = \sqrt{1-\frac{1}{\gamma^2}}c,
+\end{equation*}
+e quindi
+\begin{itemize}
+    \item $K=2mc^2 = m(\gamma-1) c^2\rightarrow \gamma = 3 \rightarrow v \approx  0.94c \approx \SI{2.8e8}{m/s}$;
+
+    \item $E=2mc^2=m\gamma c^2\rightarrow \gamma = 2\rightarrow v = \SI{2.6e8}{m/s}$.
+\end{itemize}
+\end{Answer}
+
+
+\begin{Exercise}[title={Dilatazione dei tempi e quadrimpulso}]
+Nell’urto ad alta energia di una particella di radiazione cosmica con
+un’altra particella nella parte alta dell’atmosfera terrestre,
+\SI{120}{km} sopra il livello del mare, si genera un pione di energia
+totale $E=\SI{1.35e5}{MeV}$ che si muove verticalmente verso il
+basso. Nel sistema di riferimento ad esso solidale, il pione decade
+dopo \SI{35}{ns} dalla sua creazione. A che altitudine sopra il
+livello del mare, nel sistema di riferimento terrestre, avviene il
+decadimento? L’energia a riposo di un pione è \SI{139.6}{MeV/c^2}.
+\end{Exercise}
+\begin{Answer}
+Se nel suo sistema di riferimento il pione decade dopo
+$\tau=\SI{35}{ns}$, nel sistema di riferimento del laboratorio questo
+tempo si sarà dilatato, diventando $t=\tau\gamma$. In questo tempo
+$t$, prima di decadere il pione avrà percorso una distanza
+\begin{equation*}
+    L = v t = (\beta c) (\gamma \tau).
+\end{equation*}
+L'espressione di $\gamma$ in funzione delle variabili note, $E$ ed
+$m$, la ricaviamo da $E=m\gamma c^2$ segue che $\gamma=E/(mc^2)$. Per
+ottenere quella di $\beta\gamma$, invece, osserviamo che dalla
+relazione $p=m\gamma v = m\gamma\beta/c$ segue che $\beta\gamma =
+pc/m$, e che da $(pc)^2+(mc^2)^2=E^2$, si ha che
+\begin{equation*}
+    \beta\gamma = pc/m = \frac{\sqrt{E^2-(mc^2)^2}}{m} = \sqrt{\gamma^2-1} = \sqrt{\left(\frac{E}{mc^2}\right)^2-1}.
+\end{equation*}
+Poiché la massa del pione è di \SI{139.6}{MeV/c}, questo decadrà nel laboratorio dopo aver percorso
+\begin{equation*}
+    L = \beta\gamma c\tau \approx
+    \sqrt{\left(\frac{\SI{1.35e5}{MeV}}{\SI{139.6}{MeV/c^2}c^2}\right)^2-1}\cdot\SI{30}{cm/ns}\cdot\SI{35}{ns}
+    \approx \SI{ 10.1}{km},
+\end{equation*}
+ovvero a $\SI{120}{km}-\SI{10.1}{km}\approx\SI{110}{km}$ sul livello del mare.
+\end{Answer}
+
+
+\begin{Exercise}[title={Conservazione dell'energia e impulso}]
+  Un elettrone $e^-$ con energia cinetica \SI{1.0}{MeV} collide
+  frontalmente su un positrone $e^+$ fermo (il positrone \`e
+  l'anti-particella dell'elettrone, che ha la stessa massa, ma carica
+  opposta). Nella collisione le due particelle si annichilano e il
+  risultato della reazione sono due fotoni di uguale energia, ognuno
+  dei quali viaggia a un angolo $\theta$ rispetto alla direzione del
+  moto (il fotone \`e una particella di massa nulla, il quanto della
+  radiazione elettromagnetica, con energia $E=pc$. La reazione \`e:
+  \begin{equation*}
+    e^- + e^+ \rightarrow 2\gamma
+  \end{equation*}
+\Question Calcolare l'energia $E$, l'impulso $p$ e l'angolo di
+emissione $\theta$ di ciascun fotone.
+\end{Exercise}
+
+\begin{Answer}
+  La massa a riposo dell'elettrone \`e $m=\SI{0.511}{MeV/c^2}$, e identifichiamo con la direzione positiva dell'asse $x$
+  il suo vettore impulso $p$, e con $K$ la sua energia cinetica. L'energia totale del sistema si pu\`o ottenere come
+  somma di energia cinetica e energia a riposo:
+    \begin{equation*}
+      E = K + 2mc^2 = \SI{2.022}{MeV}
+    \end{equation*}
+    Poich\'e i due fotoni hanno stessa massa (nulla, in particolare),
+    essi emergono dalla collisione con la stessa energia. Applicando
+    la conservazione dell'energia dallo stato iniziale allo stato finale:
+    \begin{equation*}
+      E_\gamma = \frac{1}{2}E = \SI{1.011}{MeV}
+    \end{equation*}
+    Per ottenere l'impulso, considerando che il fotone ha massa nulla:
+    \begin{equation*}
+      p_\gamma = \sqrt{\frac{E_\gamma^2}{c^2}-m_\gamma^2c^2} = E_\gamma/c = \SI{1.011}{MeV/c}
+    \end{equation*}
+    Per calcolare l'angolo $\theta$ con cui emergono i due fotoni (uno
+    con $+\theta$ e uno con $\-theta$ rispetto alla direzione
+    dell'asse $x$), applichiamo la conservazione dell'impulso lungo la direzione $x$:
+    \begin{equation*}
+      p = 2p_\gamma\cos\theta
+    \end{equation*}
+    Dobbiamo trovare $p$ del sistema, che \`e quello dell'elettrone incidente, poich\'e il positrone \`e fermo. Quindi:
+    \begin{equation*}
+      p^2c^2 = E^2 - m^2c^4  = (K+mc^2)^2 - m^2c^4 = K^2 + m^2c^4 2mKc^2 - m^2c^4 =
+      K(K+2mc^2)
+    \end{equation*}
+    e quindi:
+    \begin{equation*}
+    p = \sqrt{K(K+2mc^2)}/c = \sqrt{\SI{1}{MeV}(\SI{1}{MeV}+2\SI{0.511}{MeV/c^2}c^2)}/c = \SI{1.422}{MeV/c}
+    \end{equation*}
+    Usando questo valore di $p$ si ottiene $\theta=45.3^\circ$.
+\end{Answer}
+
+\begin{Exercise}[title={Sistema di riferimento del laboratorio e del centro di massa }]
+  Si consideri un fascio di antiprotoni di impulso \SI{0.65}{GeV/c}
+  che impattano su un bersaglio di atomi di idrogeno.  In questa
+  collisione, se c'\`e energia sufficiente, potrebbero prodursi dei
+  barioni $\Lambda$, particelle contenenti un quark up ($u$), un quark
+  down ($d$) e un terzo quark, che pu\`o strange ($s$), charm ($c$) o
+  bottom ($b$). Quello con il quark $s$ ha una massa a riposo
+  $m_\Lambda=m_{\bar\Lambda}=\SI{1.116}{GeV/c^2}$, dove $\bar\Lambda$
+  \`e l'anti-particella del barione $\Lambda$.
+  \Question La reazione $\bar p p\to\Lambda\bar\Lambda$ pu\`o avvenire?
+\end{Exercise}
+  
+\begin{Answer}
+  La risoluzione del problema \`e facilitata calcolando la massa invariante in due sistemi
+  di riferimento diversi. Nello stato iniziale, i quadrimpulsi nel laboratorio sono:
+  \begin{eqnarray*}
+    P_1 &=& [E_1/c, \vec p_1] \\
+    P_2 &=& [m_pc,\vec 0].
+  \end{eqnarray*}
+  La massa invariante \`e quindi:
+  \begin{equation*}
+    \sqrt{s} = \sqrt{2m_p^2c^4+2E_1m_pc^2}.
+  \end{equation*}
+  L'energia minima per far avvenire la reazione \`e quella per cui le
+  particelle dello stato finale sono a riposo nel sistema di
+  riferimento del centro di massa. In questo sistema di riferimento si ha:
+  \begin{equation*}
+    \sqrt{s} = 2m_\Lambda c^2.
+  \end{equation*}
+  Applicando la conservazione della massa invariante prima e dopo la reazione:
+  \begin{equation*}
+    4m_\Lambda^2c^4 = 2 m_p^2c^4 + 2 E_1m_pc^2
+  \end{equation*}
+  da cui si ottiene:
+  \begin{equation*}
+    E_1 = \frac{2m_\Lambda c^2-m_p^2c^2}{m_p} = \SI{1.72}{GeV}.
+  \end{equation*}
+  Da questo, l'impulso del fascio alla soglia deve essere:
+  \begin{equation*}
+    p_1c = \sqrt{E_1^2 - m_p^2 c^4} = \SI{1.4}{GeV}.
+  \end{equation*}
+  Quindi con un fascio di antiprotoni con impulso di soli
+  \SI{0.65}{GeV/c} su targhetta non si possono produrre delle coppie
+  $\Lambda-\bar\Lambda$.
+  
+\end{Answer}
+
