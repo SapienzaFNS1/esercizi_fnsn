@@ -1,3 +1,29 @@
+\begin{Exercise}[title={Sezione d'urto}]
+  La reazione $\alpha+^{59}_{27}Co \to ^{61}_{29}Cu + 2n$ permette di produrre l'isotopo radioattivo $^{61}_{29}Cu$. Si consideri un bersaglio di cobalto $^{59}_{27}Co$ di
+  densit\`a $\rho = \SI{8.9}{g/cm^3}$, di area $S=\SI{2.25}{cm^2}$ e spessore $d=\SI{2.5}{\mu m}$. Il fascio di particelle $\alpha$, di corrente $I =\SI{10}{\mu A}$, copre uniformemente il bersaglio di cobalto. All’energia delle particelle $\alpha$ incidenti la sezione d’urto sia $\sigma = \SI{0.66}{barn}$.
+  \Question Calcolare il numero di nuclei $^{61}_{29}Cu$ prodotti al secondo.
+\end{Exercise}
+
+\begin{Answer}
+  Il numero di nuclei di rame prodotti al secondo è dato da:
+  \[
+  \dv{N_{Cu}}{t} = \sigma \cdot N_{Co} \cdot \Phi_\alpha = \sigma \cdot n_{Co} V_{Co} \Phi_\alpha = \sigma \cdot n_{Co} S d \Phi_\alpha
+  \]
+  Il flusso di particelle $\alpha$ per unit\`a di superficie e per secondo, indicando con $e$ la carica dell’elettrone, \`e pari a:
+  \[
+  \Phi_\alpha = \frac{1}{S}\cdot\frac{I}{2e} = \SI{1.39e+13}{cm^{-2}s^{-1}}
+  \]
+  mentre la densit\`a di bersagli (atomi di Cobalto) \`e:
+  \[
+  n_{Co} = \frac{N_A}{A_{Co}} \cdot \rho_{Co} = \SI{9.08e+22}{cm^{-3}}.
+  \]
+  Dalla densit\`a volumetrica dei bersagli si ottiene il numero di nuclei prodotti nell'unit\`a di tempo:
+  \[
+  \dv{N_{Cu}}{t} = \SI{4.68e+8}{s^{-1}}
+  \]
+\end{Answer}
+  
+
 \begin{Exercise}[title={Perdita di energia per ionizzazione}]
 In un centro di radioterapia, degli elettroni sono accelerati da un acceleratore lineare fino a un'energia di \SI{25}{MeV}. 
 
@@ -150,5 +176,78 @@ Si usino:
     \eeq
     dal quale, facendo il logaritmo di entrambi i lati dell'equazione, $x = \SI{13.9}{cm}$.
   \end{enumerate}
+\end{Answer}
 
+\begin{Exercise}[title={Spettrometro, Cherenkov a soglia}]
+  Un fascio di particelle contenente $e^+$, $\mu^+$, $\pi^+$, $K^+$ e protoni, tutti collineari, entra in uno spettrometro magnetico lungo L = \SI{50}{cm} con un campo magnetico $B = \SI{1.7}{T}$ ortogonale alla traiettoria delle particelle. In uscita dal magnete le particelle attraversano un collimatore posto ad una distanza $D = \SI{10}{m}$ lungo la loro traiettoria, come in figura.
+  \begin{figure}[ht]
+  \begin{center}
+    \includegraphics[width=0.49\linewidth]{fig-2021-04-07-fig1}
+  \end{center}
+  \end{figure}
+
+  \Question A che distanza $x$ dalla linea di volo iniziale escono le particelle che hanno un impulso di \SI{2}{GeV/c}?   
+
+  \Question Quale deve essere la larghezza minima $d$ del collimatore per selezionare particelle prodotte con momento entro $\pm 0.5\%$ dal valore centrale? Si trascuri la dipendenza di $x$ dall’impulso delle particelle.
+
+  Posizionando dei contatori Cherenkov a soglia dopo il collimatore si vogliono identificare le particelle K+.
+
+  \Question Quanti contatori Cherenkov sono necessari? Che valore di indice di rifrazione $n_i$ si pu\`o scegliere per ciascuno di essi (si consideri per tutte le particelle impulso pari a \SI{2}{GeV/c}).
+
+  Si usino: $m_e = \SI{0.511}{MeV/c^2}$; $m_\mu = \SI{105}{MeV/c^2}$; $m_{\pi^+} = \SI{140}{MeV/c^2}$; $m_K = \SI{494}{MeV/c^2}$; $m_p = \SI{939}{MeV/c^2}$
+\end{Exercise}
+\begin{Answer}
+  \begin{enumerate}
+  \item In uno spettrometro magnetico vale:
+    \[
+    p[GeV] = 0.3B[T] R[m]
+    \]
+    pertanto le particelle con impulso $p = \SI{2}{GeV/c}$ si muovono su una circonferenza con raggio di curvatura:
+    \[
+    R = \frac{p}{0.3 \cdot B} = \SI{3.92}{m}.
+    \]
+    L’angolo di deflessione vale quindi:
+    \[
+    \theta = \arcsin (L/R),
+    \]
+    che per piccoli angoli si puo` approssimare ($\sin x \approx x per x \to 0$) con $\theta \approx L/R$. La distanza dalla linea di volo iniziale a cui escono le particelle \`e quindi:
+    \[
+    x = R(1-\cos\theta) \approx \frac{R\theta^2}{2} = \frac{L^2}{2R} = \SI{3.19}{cm}.
+    \]
+    
+  \item L’impulso delle particelle selezionate dal collimatore sar\`a compreso tra:
+    \begin{itemize}
+    \item $p_1 = p\cdot(1-0.005) = \SI{1.99}{GeV/c}$ e
+    \item $p_2 = p\cdot(1+0.005) = \SI{2.01}{GeV/c}$.
+    \end{itemize}
+    L’angolo formato da $p_1$ e $p_2$ all’uscita dal magnete vale:
+    \[
+    \Delta \theta = \theta_1 - \theta_2 = 0.3 \cdot B\cdot L\cdot (p_2 - p_1)/(p_1p_2) = \SI{1.27}{mrad}.
+    \]
+    Se la distanza della fenditura dall’uscita dal magnete \`e $D$, la sua larghezza minima deve essere
+    \[
+    d = D \Delta\theta = \theta{1.27}{cm}.
+    \]
+
+  \item Affinche` venga emessa radiazione Cerenkov la velocita` di una particella deve essere tale che $\beta > 1/n$, quindi $n > 1/\beta$. I valori di $\beta$ per le particelle considerate e i corrispondenti indici di rifrazione minimi per avere emissione di radiazione sono:
+    \begin{itemize}
+      \item $e^+$: $\beta = 1$, quindi $n >1$
+      \item $\mu^+$: $\beta = 0.9986$, quindi $n >1.0014$
+      \item $\pi^+$: $\beta = 0.9976$, quindi $n >1.0025$
+      \item $K^+$:, $\beta = 0.971$, quindi $n >1.030$
+      \item protone: $\beta = 0.905$, quindi $n >1.105$
+    \end{itemize}
+    Per identificare i $K^+$ sono sufficienti due contatori Cherenkov con indici di rifrazione tali che nel primo siano sopra soglia $e^+$, $\mu^+$ e $\pi^+$, e nel secondo $e^+$, $\mu^+$, $\pi^+$ e
+    $K^+$. Occorre quindi:
+    \begin{itemize}
+    \item un primo contatore con indice di rifrazione: $1.0025 < n <1.03$
+    \item un secondo contatore con indice di rifrazione: $1.03 < n <1.105$
+    \end{itemize}
+    \`E preferibile scegliere valori dell’indice di rifrazione intermedi tra quelli indicati e non al limite. Valori ottimali sono ad esempio:
+    \begin{align*}
+      n_1 &= \left(\frac{\beta_{K^+} + \beta_\pi^+}{2}\right)^-1 = 1.016 \\
+      n_2 &= \left(\frac{\beta_{K^+} + \beta_p}{2}\right)^-1 = 1.066
+    \end{align*}
+    L’anticoincidenza dei due segnali consente l’identificazione dei $K^+$.
+  \end{enumerate}
 \end{Answer}
