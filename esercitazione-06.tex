@@ -1,4 +1,4 @@
-\begin{Exercise}
+\begin{Exercise}[title={Riepilogo: cinematica, ionizzazione, Cerenkov}]
   Il rivelatore SuperKamiokande \`e un grosso cilindro verticale riempito di acqua (indice di rifrazione $n=1.33$,
   densit\`a $\rho=\SI{1}{g/cm^3}$). I neutrini atmosferici di tipo muonico ($\nu_\mu$) sono studiati rivelando la luce
   Cherenkov emessa dai muoni prodotti nell'interazione con i nuclei dell'acqua. Assumendo che si vogliono misurare soltanto
@@ -83,7 +83,7 @@
   \end{enumerate}
 \end{Answer}
 
-\begin{Exercise}
+\begin{Exercise}[title={Riepilogo: energia di soglia, angolo di apertura nel laboratorio}]
   Un fascio di pioni carichi interagisce con un bersaglio di protoni
   fermi nel sistema di riferimento del laboratorio. Si vuole studiare
   la reazione $\pi^- + p \rightarrow \Lambda^0 + L^0$. Calcolare
@@ -137,4 +137,87 @@
   \[
   \theta_{max} = \atan \left\{ \left[ \gamma_{cm}\sqrt{\left(\frac{\beta_{cm}}{\beta^*}\right)^2-1}\right]^{-1}\right\} \approx 42^\circ
   \]
+\end{Answer}
+
+\begin{Exercise}[title={Scattering Rutherford}]
+Un fascio di particelle $\alpha$ di \SI{100}{MeV} di energia e \SI{0.32}{nA} di corrente\footnote{Per una spiegazione breve su come (e perché) si misura la corrente di un fascio di particelle, vedi \url{https://www.lhc-closer.es/taking_a_closer_look_at_lhc/0.beam_current}. Una trattazione più completa è data ad esempio da \url{https://cds.cern.ch/record/1213275/files/p141.pdf}.} collide contro un bersaglio fisso di alluminio, spesso \SI{1}{cm}. Una sperimentatrice prende un rivelatore di $\SI{1}{cm}\times\SI{1}{cm}$ di superficie, e lo posiziona ad un angolo di \ang{30} rispetto al fascio di particelle, a \SI{1}{m} di distanza dal bersaglio. Quante particelle $\alpha$ incideranno sul rivelatore ogni secondo?
+\end{Exercise}
+\begin{Answer}
+L'alluminio ha una densità di \SI{2.7}{g/cm^3}, numero atomico $13$ e massa atomica \SI{27}{u}.
+
+Poiché le particelle $\alpha$ sono nuclei di elio, hanno carica $2e$ e la corrente di \SI{0.32}{nA} corrisponde a un miliardo di particelle incidenti al secondo,
+\[
+\dv{N_i}{t}=\frac{\SI{0.32}{nC/s}}{2\times\SI{1.6e-19}{C}} = \SI{1e9}{s^{-1}}.
+\]
+
+Il rivelatore vede un angolo solido di
+\[
+\Delta\Omega\equiv \frac{\text{superficie}}{\text{raggio}}^2 = \frac{\SI{1}{cm^2}}{(\SI{1}{m})^2} = \SI{1e-4}{sr}
+\]
+
+Si tratta di uno scattering alla Rutherford, per cui la sezione d'urto per unità di angolo solido rilevata ad un certo angolo $\theta$ vale
+\[
+\dv{\sigma}{\Omega} = \left(\frac{z_{\alpha}z_{Al}e^2}{4\pi\epsilon_04E}\frac{1}{\sin^2(\theta/2)}\right)^2,
+\]
+pari a
+\begin{equation}\begin{split}
+\dv{\sigma}{\Omega} \approx \left(\frac{2\times13\times4\times e\times\SI{1.6e-19}{C}}{4\pi\times\SI{8.9e-12}{F/m}\times4\times\SI{100e6}{eV}}\frac{1}{\sin^2(\pi/\ang{180}\times\ang{30}/2)}\right)^2\\
+\approx \SI{2e-30}{m^2/sr}=\SI{20}{mb/sr},
+\end{split}\end{equation}
+e il numero di particelle visto dal rivelatore vale, se indichiamo con $n_{Al}=\rho_{Al}\frac{N_A}{A_{Al}}$ la densità numero di atomi di alluminio, e con $d$ lo spessore del rivelatore,
+\begin{equation*}
+\begin{split}
+&\dv{N_\text{rivelate}}{t}=\Delta\Omega\dv{\sigma}{\Omega}n_{Al}d \dv{N_\text{i}}{t}\\ 
+&\approx\SI{1e-4}{sr}\times \SI{2e-30}{m^2/sr} \times \SI{1e4}{cm^2/m^2}  \times \SI{2.7}{g/cm^3} \frac{\SI{6e23}{mol^{-1}}}{\SI{27}{g/mol}}\\&= \SI{120}{Hz}.
+\end{split}
+\end{equation*}
+\end{Answer}
+
+\begin{Exercise}[title={Cinematica ad un collider}]
+In un anello di collisione elettrone-elettrone si hanno due fasci 
+di $e^-$ che si scontrano frontalmente (direzioni parallele e versi opposti 
+dei rispettivi impulsi). L'energie
+dei due fasci di elettroni sono rispettivamente $E_1 = \SI{12.0}{GeV}$ ed
+$E_2 = \SI{5.0}{GeV}$. Si determini: 
+
+\Question l'energia totale nel CM, 
+\Question l'impulso delle particelle nel CM, 
+\Question il beta ed il gamma della trasformazione LAB $\to$ CM,
+\Question nel caso di una collisione con la stessa geometria di quella descritta
+sopra ma con $E_1=E_2$, la relazione che intercorre tra CM e LAB.
+\end{Exercise}
+\begin{Answer}
+  \begin{enumerate}
+  \item  L'energia totale disponibile nel centro di massa pu\`o essere 
+    calcolata imponendo la conservazione del 4-impulso e l'invarianza 
+    del modulo quadro di questo sotto trasformazioni di Lorentz, si ottiene
+    \[
+    E^*=\sqrt{E_1^2+E_2^2+2E_1 E_2-p_1^2 - p_2^2 +2 p_1 p_2}=
+    \sqrt{2m^2+2 E_1 E_2 +2 p_1 p_2}\simeq \sqrt{4 E_1 E_2}
+    \]
+    nell'ultimo passaggio, date le energie in gioco, abbiamo trascurato 
+    la massa dell'elettrone. Numericamente l'energia totale nel CM sar\`a
+    $E^*=\SI{15.5}{GeV}$. 
+    
+  \item I moduli degli impulsi delle particelle nel COM sono, per definizione,
+    uguali e, dunque, usando l'equazione di mass-shell delle particelle
+    nell'ipotesi di massa trascurabile segue 
+    \[
+    p^*=\frac{E^*}{2} \approx \SI{7.74}{GeV}.
+    \]
+
+  \item       La velocit\`a del CM nel LAB \`e, in unit\`a di $c$, data da
+    \[
+    \beta_{CM}=\frac{|\vec{p_1}+\vec{p_2}|}{E_1+E_2}=
+    \frac{\sqrt{E_1^2-m^2} - \sqrt{E_2^2-m^2}}{E_1+E_2} \approx 
+    \frac{E_1-E_2}{E_1+E_2} \simeq 0.4
+    \]
+    di conseguenza:
+    \[
+    \gamma_{CM}=(1-\beta_{CM}^2)^{-1/2} \approx 1.1
+    \]
+
+    \item Nel caso in cui $E_1=E_2$ \`e evidente dalla relazione per $\beta_{CM}$ 
+      che i due sistemi di riferimento CM e LAB coincidono.
+  \end{enumerate}
 \end{Answer}
