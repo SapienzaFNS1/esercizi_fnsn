@@ -1,0 +1,431 @@
+\begin{Exercise}[title={Cinematica, ionizzazione, Cerenkov}]
+  Il rivelatore SuperKamiokande \`e un grosso cilindro verticale riempito di acqua (indice di rifrazione $n=1.33$,
+  densit\`a $\rho=\SI{1}{g/cm^3}$). I neutrini atmosferici di tipo muonico ($\nu_\mu$) sono studiati rivelando la luce
+  Cherenkov emessa dai muoni prodotti nell'interazione con i nuclei dell'acqua. Assumendo che si vogliono misurare soltanto
+  i muoni di impulso fino a $p_\textrm{max}=\SI{1}{GeV/c}$ si determini:
+  \Question qual \`e il percorso massimo dei muoni nell'acqua, considerando un percorso rettilineo e trascurando
+  l'effetto del multiplo scattering
+  \Question per quale parte di questo percorso il muone emette luce Cherenkov
+  \Question qual \`e il raggio del cerchio illuminato sulla base del cilindro da un muone di impulso $p_\mu=\SI{1}{GeV/c}$ prodotto
+  lungo l'asse del cilindro, ad un'altezza $h=\SI{50}{cm}$ dalla base stessa
+\end{Exercise}
+\begin{Answer}
+  \begin{enumerate}
+  \item La perdita di energia per i muoni nell'acqua \`e principalmente dovuta alla ionizzazione, mentre il
+    contributo della perdita di energia per emissione di luce Cerenkov \`e circa mille volte inferiore.
+    I muoni hanno massa $m_\mu=\SI{106}{MeV/c^2}$, e quindi il loro fattore di Lorentz \`e:
+    \[
+    \beta\gamma = \frac{p}{m_\mu c}=\frac{\SI{1}{GeV/c}}{\SI{0.106}{GeV/c}} = 9.4
+    \]
+    A questo valore la perdita di energia \`e ancora ben approssimata
+    dal valore al minimo della ionizzazione (\`e solo l'inizio della
+    salita relativistica, che \`e logaritmica). Quindi si pu\`o
+    assumere una perdita di energia circa costante, e pari a
+    $\dv{E}{x}\vert_\textrm{min}\approx\SI{2}{MeV/g \cdot cm^{-2}}$.
+    L'energia cinetica massima dei muoni che si vogliono considerare \`e:
+    \[
+    K_\textrm{max} = \sqrt{p_\textrm{max}^2+m_\mu^2} - m_\mu \approx \SI{900}{MeV}
+    \]
+    e quindi il percorso massimo \`e dato da:
+    \[
+    d_\textrm{max} = \frac{K_\textrm{max}}{\rho\cdot\dv{E}{x}\vert_\textrm{min}} \approx \SI{4.5}{m}
+    \]
+
+  \item Il muone emette luce Cherenvov finch\'e il suo impulso \`e superiore alla soglia:
+    \[
+    \beta > \beta_\textrm{min} = \frac{1}{n} \approx 0.75
+    \]
+    e quindi:
+    \beqn
+    \frac{p}{E} &>& \beta_\textrm{min} \Rightarrow \frac{p}{p^2+m_\mu^2} > \beta_\textrm{min}
+    \Rightarrow p^2 >  \beta_\textrm{min} (p^2+m_\mu^2) \\
+    &\Rightarrow& p>\frac{\beta_\textrm{min} m_\mu}{\sqrt{1-\beta_\textrm{min}}} \approx \SI{120}{MeV/c} \equiv p_\textrm{min}
+    \eeqn
+    e quindi l'energia cinetica minima \`e:
+    \[
+    K_\textrm{min} = \sqrt{p_\textrm{min}^2+m_\mu^2} - m_\mu^2 \approx \SI{54}{MeV}
+    \]
+    Mentre il muone viaggia nell'acqua, perde energia per
+    ionizzazione, come fatto nel punto precedente, fino a raggiungere
+    $K_\textrm{min}$. Sempre approssimando la perdita di energia come
+    una costante (che \`e ancora un'approssimazione abbastanza buona per $p_\textrm{min}\approx \SI{100}{MeV}$), si ha
+    che il percorso durante il quale il muone emette luce Cherenkov \`e:
+    \[
+    L = \frac{K_0 -
+      K_\textrm{min}}{\rho\cdot\dv{E}{x}\vert_\textrm{min}} =
+    \frac{\SI{900}{MeV}-\SI{54}{MeV}}{\SI{2}{MeV/cm}} \approx
+    \SI{4.2}{m}
+    \]
+    Quindi la frazione del percorso massimo dei muoni in cui questo avviene \`e:
+    \[
+    f = \frac{L}{d_\textrm{max}} = \frac{\SI{4.2}{m}}{\SI{4.5}{m}} = 93\%
+    \]
+
+  \item Un mone di impulso \SI{1}{GeV/c} emette luce Cherenkov su un cono di apertura:
+    \[
+    \cos\theta_C = \frac{1}{\beta n}
+    \]
+    dove $\beta = p/E = p/\sqrt{p^2+m_\mu^2}=0.9944$ e quindi 
+    \[
+    \cos\theta_C = \frac{1}{0.9944\cdot 1.33} \approx 0.756
+    \]
+    durante il suo percorso verso la base, il vertice di emissione
+    della luce si avvicina, e quindi i successivi coni di luce sono
+    contenuti nel primo. Inoltre, perdendo energia, il $\beta$
+    diminuice, e quindi $\cos\theta_C$ aumenta, e quindi anche
+    $\theta_C$ diminuisce, cntribuendo a rendere i coni successivi
+    contenuti nel primo.  Quindi la zona illuminata \`e interna al
+    cerchi dell'emissione avvenuta alla distanza $h=\SI{50}{cm}$ dalla
+    base:
+    \[
+    R = h \tan\theta_C = h \frac{\sqrt{1-\cos^2\theta_C}}{\cos\theta_C} \approx 0.865 \cdot h \approx \SI{43}{cm}
+    \]
+  \end{enumerate}
+\end{Answer}
+
+\begin{Exercise}[title={Spettrometro magnetico, perdite di energia, multiplo scattering}]
+  Un fascio di elettroni e pioni negativi aventi un impulso
+  $p=\SI{50}{GeV/c}$ attraversa un magnete lungo $L=\SI{2}{m}$ che
+  produce un campo magnetico uniforme $B =\SI{2.2}{T}$. All’uscita del
+  magnete \`e posto uno scintillatore plastico di spessore $\Delta
+  x=\SI{2}{cm}$, densit\`a $\rho = \SI{1.03}{gcm^{-3}}$ e lunghezza di
+  radiazione $X_0=\SI{40}{cm}$. Determinare:
+
+  \Question il raggio di curvatura $R$ e l’angolo di deviazione per i pioni
+
+  \Question la distanza dalla linea di volo iniziale  con cui escono dal magnete i pioni
+
+  \Question l’energia persa dai pioni e dagli elettroni nell’attraversare lo scintillatore (si trascuri
+  l’effetto densit\`a $\delta(\gamma)$)
+
+  \Question l’angolo medio di deviazione dovuto allo scattering multiplo Coulombiano (nell’attraversare lo
+  scintillatore) per entrambe le particelle
+
+  Si usino $m_{\pi^-}=\SI{139.6}{MeV/c^2}$, $\langle I \rangle = \SI{200}{eV}$, $Z/A=0.5$, $m_e=\SI{0.511}{MeV/c^2}$.
+
+\end{Exercise}
+\begin{Answer}
+  \begin{enumerate}
+  \item Il raggio di curvatura, per una particella che si muove in un campo magnetico ortogonale al suo moto, misurato in unit\`a MKS, \`e:
+    \[
+    R [m] = \frac{p[GeV/c] c}{0.3 B[T]} = \SI{75.76}{m}
+    \]
+
+  \item Nell'approssimazione di piccolo angolo, l'angolo sotteso
+    dall'arco di circonferenza descritto dalla particella \`e:
+    \[
+    \theta = \arcsin\left(\frac{L}{R}\right) \approx \frac{L}{R} = \SI{0.026}{rad} (=1.5^\circ)
+    \]
+    e quindi la distanza dalla linea di volo iniziale con cui i pioni escono dal magnete \`e:
+    \[
+    x = R(1-\cos\theta) \approx \SI{3.0}{cm}
+    \]
+
+  \item Il meccanismo principale di perdita di energia per i pioni \`e quello della ionizzazione, ed \`e dato dalla
+    formula di Bethe-Bloch:
+    \[
+    \dv{E}{x} = C \cdot \rho \left(\frac{Z}{A}\right) \left( \frac{z^2}{\beta^2} \right)
+    \left[\ln\left(\frac{2m_e c^2(\beta\gamma)^2}{\langle I \rangle}\right) -\beta^2 \right]
+    \]
+    in cui la costante $C \approx \SI{0.3}{MeV/cm}$, e trascuriamo l'effetto di densit\`a.
+    Il valore di perdita di energia medio \`e quindi:
+    \[
+    \dv{E}{x} = \SI{2.98}{MeV/cm}
+    \]
+    e, considerando questa perdita di energia circa costante lungo il tratto percorso, la perdita di energia totale \`e:
+    \[
+    \Delta E = \dv{E}{x} \cdot \Delta x =  \SI{2.98}{MeV/cm} \cdot \SI{2}{cm} = \SI{5.96}{MeV}
+    \]
+    Per degli elettroni, invece, la perdita di energia principale \`e per irragiamento, e l'andamento
+    dell'energia, in funzione della profondit\`a del mezzo attraversato, \`e:
+    \[
+    E(x) = E_0 e^{x/X_0}
+    \]
+    A una prodondit\`a $x=\SI{2}{cm}$ si ha quindi $E=\SI{47.56}{GeV}$, e quindi la perdita \`e:
+    \[
+    \Delta E = E_0 - E(\SI{2}{cm}) = \SI{2.43}{GeV}
+    \]
+
+  \item Lo scattering Coulombiamo produce una variazione nell’angolo data dalla formula:
+    \[
+    \langle \bar \theta_{MS} \rangle = \SI{13.6}{MeV} \frac{z}{pc\beta}\sqrt{\frac{x}{X_0}}
+    \]
+    usando i valori numerici $z=1$, $\beta\approx 1$, $p=\SI{50000}{MeV/c}$ si ottiene
+    \[
+    \langle \bar \theta_{MS} \rangle = \SI{9.5e-5}{rad} = 0.005^\circ
+    \]
+   \end{enumerate}
+\end{Answer}
+
+
+\begin{Exercise}[title={Energia di soglia, angolo di apertura nel laboratorio}]
+  Un fascio di pioni carichi interagisce con un bersaglio di protoni
+  fermi nel sistema di riferimento del laboratorio. Si vuole studiare
+  la reazione $\pi^- + p \rightarrow \Lambda^0 + L^0$. Calcolare
+  l'energia minima del pione affinch\'e la reazione possa avvenire.
+  Le masse delle particelle della reazione sono:
+  $m_\pi=\SI{140}{MeV/c^2}$, $m_p=\SI{938}{MeV/c^2}$,
+  $m_\Lambda=\SI{1116}{MeV/c^2}$, $m_K=\SI{498}{MeV/c^2}$
+  
+  \Question Se l'energia del fascio \`e $E_\pi=\SI{2.0}{GeV}$,
+  calcolare, se esiste, l'angolo massimo nel laboratorio con cui viene
+  emessa la particella $\Lambda^0$. 
+\end{Exercise}
+\begin{Answer}
+  L'energia di soglia del pione \`e la minima necessaria per produrre
+  le particelle finali a riposo nel sistema di riferimento del centro
+  di massa ($E_\textrm{min}$). Uguagliando la massa invariante dello
+  stato iniziale e finale nel centro di massa: \beqn
+  \sqrt{s}_\textrm{in} = \sqrt{E_\textrm{min} + m_p} \\
+  \sqrt{s}_\textrm{fin} = \sqrt{m_K + m_\Lambda} \eeqn elevando al
+  quadrato ed uguagliando le masse invarianti si ottiene:
+  \beqn
+  E^2_\textrm{min} + m_p^2 + 2E_\textrm{min}m_p =  (m_K + m_\Lambda)^2 \\
+  \Rightarrow E_\textrm{min} = \frac{(m_K + m_\Lambda)^2 - m_\pi^2 - m_p^2}{2m_p} \approx \SI{0.91}{GeV}
+  \eeqn
+
+  L'angolo massimo di emissione nel laboratorio esiste solo nel caso in cui la velocit\`a della particella
+  nel centro di massa, $\beta^*$, \`e minore della velocit\`a del centro di massa nel laboratorio, $\beta^{cm}$:
+  \[
+  \beta^* < \beta^{cm} = \frac{p_{cm}}{E_{cm}} = \frac{\sqrt{E_\pi^2-m_\pi^2}}{E_\pi+m_p} \approx 0.665
+  \]
+  Per verificare se la condizione \`e possibile bisogna calcolare l'impulso e l'energia della $\Lambda^0$ nel centro di massa.
+  L'energia totale del centro di massa \`e:  
+  \[
+  E^*_\textrm{tot} = \sqrt{m_p^2+m_\pi^2+2E_\pi m_p} \approx \SI{2.16}{GeV}
+  \]
+  Usando la conservazione dell'energia nel centro di massa, e chiamando $p^* \equiv \vert \vec p^*_\Lambda\vert = \vert \vec p^*_K\vert$,
+  si pu\`o calcolare l'impulso della $\Lambda^0$ nel centro di massa:
+  \[
+  E^*_\textrm{tot} = E^*_\Lambda + E^*_K = \sqrt{{p^*}^2+m_\Lambda^2} + \sqrt{{p^*}^2+m_K^2}
+  \]
+  elevando due volte al quadrato e risolvendo l'equazione in $p^*$ si ottiene
+  \[
+  p^* = \frac{\sqrt{[{E^*}^2-(m_\Lambda + m_K)^2][{E^*}^2-(m_\Lambda - m_K)^2]}}{2E^*} \approx \SI{0.69}{GeV/c}
+  \]
+  da cui si ricava:
+  \[
+  \beta^* = \frac{p^*}{E^*} = \frac{p^*}{{p^*}^2+m_\Lambda^2} \approx 0.52.
+  \]
+  Quindi la condizione $\beta^*<\beta_{cm}$ \`e soddisfatta, per cui esiste un angolo massimo di emissione della particella $\Lambda^0$ nel laboratorio.
+  Questo angolo \`e:
+  \[
+  \theta_{max} = \atan \left\{ \left[ \gamma_{cm}\sqrt{\left(\frac{\beta_{cm}}{\beta^*}\right)^2-1}\right]^{-1}\right\} \approx 42^\circ
+  \]
+\end{Answer}
+
+\begin{Exercise}[title={Scattering Rutherford}]
+Un fascio di particelle $\alpha$ di \SI{100}{MeV} di energia e \SI{0.32}{nA} di corrente\footnote{Per una spiegazione breve su come (e perché) si misura la corrente di un fascio di particelle, vedi \url{https://www.lhc-closer.es/taking_a_closer_look_at_lhc/0.beam_current}. Una trattazione più completa è data ad esempio da \url{https://cds.cern.ch/record/1213275/files/p141.pdf}.} collide contro un bersaglio fisso di alluminio, spesso \SI{1}{cm}. Una sperimentatrice prende un rivelatore di $\SI{1}{cm}\times\SI{1}{cm}$ di superficie, e lo posiziona ad un angolo di \ang{30} rispetto al fascio di particelle, a \SI{1}{m} di distanza dal bersaglio. Quante particelle $\alpha$ incideranno sul rivelatore ogni secondo?
+\end{Exercise}
+\begin{Answer}
+L'alluminio ha una densità di \SI{2.7}{g/cm^3}, numero atomico $13$ e massa atomica \SI{27}{u}.
+
+Poiché le particelle $\alpha$ sono nuclei di elio, hanno carica $2e$ e la corrente di \SI{0.32}{nA} corrisponde a un miliardo di particelle incidenti al secondo,
+\[
+\dv{N_i}{t}=\frac{\SI{0.32}{nC/s}}{2\times\SI{1.6e-19}{C}} = \SI{1e9}{s^{-1}}.
+\]
+
+Il rivelatore vede un angolo solido di
+\[
+\Delta\Omega\equiv \frac{\text{superficie}}{\text{raggio}}^2 = \frac{\SI{1}{cm^2}}{(\SI{1}{m})^2} = \SI{1e-4}{sr}
+\]
+
+Si tratta di uno scattering alla Rutherford, per cui la sezione d'urto per unità di angolo solido rilevata ad un certo angolo $\theta$ vale
+\[
+\dv{\sigma}{\Omega} = \left(\frac{z_{\alpha}z_{Al}e^2}{4\pi\epsilon_04E}\frac{1}{\sin^2(\theta/2)}\right)^2,
+\]
+pari a
+\begin{equation}\begin{split}
+\dv{\sigma}{\Omega} \approx \left(\frac{2\times13\times4\times e\times\SI{1.6e-19}{C}}{4\pi\times\SI{8.9e-12}{F/m}\times4\times\SI{100e6}{eV}}\frac{1}{\sin^2(\pi/\ang{180}\times\ang{30}/2)}\right)^2\\
+\approx \SI{2e-30}{m^2/sr}=\SI{20}{mb/sr},
+\end{split}\end{equation}
+e il numero di particelle visto dal rivelatore vale, se indichiamo con $n_{Al}=\rho_{Al}\frac{N_A}{A_{Al}}$ la densità numero di atomi di alluminio, e con $d$ lo spessore del rivelatore,
+\begin{equation*}
+\begin{split}
+&\dv{N_\text{rivelate}}{t}=\Delta\Omega\dv{\sigma}{\Omega}n_{Al}d \dv{N_\text{i}}{t}\\ 
+&\approx\SI{1e-4}{sr}\times \SI{2e-30}{m^2/sr} \times \SI{1e4}{cm^2/m^2}  \times \SI{2.7}{g/cm^3} \frac{\SI{6e23}{mol^{-1}}}{\SI{27}{g/mol}}\\&= \SI{120}{Hz}.
+\end{split}
+\end{equation*}
+\end{Answer}
+
+\begin{Exercise}[title={Cinematica ad un collider}]
+In un anello di collisione elettrone-elettrone si hanno due fasci 
+di $e^-$ che si scontrano frontalmente (direzioni parallele e versi opposti 
+dei rispettivi impulsi). L'energie
+dei due fasci di elettroni sono rispettivamente $E_1 = \SI{12.0}{GeV}$ ed
+$E_2 = \SI{5.0}{GeV}$. Si determini: 
+
+\Question l'energia totale nel CM, 
+\Question l'impulso delle particelle nel CM, 
+\Question il beta ed il gamma della trasformazione LAB $\to$ CM,
+\Question nel caso di una collisione con la stessa geometria di quella descritta
+sopra ma con $E_1=E_2$, la relazione che intercorre tra CM e LAB.
+\end{Exercise}
+\begin{Answer}
+  \begin{enumerate}
+  \item  L'energia totale disponibile nel centro di massa pu\`o essere 
+    calcolata imponendo la conservazione del 4-impulso e l'invarianza 
+    del modulo quadro di questo sotto trasformazioni di Lorentz, si ottiene
+    \[
+    E^*=\sqrt{E_1^2+E_2^2+2E_1 E_2-p_1^2 - p_2^2 +2 p_1 p_2}=
+    \sqrt{2m^2+2 E_1 E_2 +2 p_1 p_2}\simeq \sqrt{4 E_1 E_2}
+    \]
+    nell'ultimo passaggio, date le energie in gioco, abbiamo trascurato 
+    la massa dell'elettrone. Numericamente l'energia totale nel CM sar\`a
+    $E^*=\SI{15.5}{GeV}$. 
+    
+  \item I moduli degli impulsi delle particelle nel COM sono, per definizione,
+    uguali e, dunque, usando l'equazione di mass-shell delle particelle
+    nell'ipotesi di massa trascurabile segue 
+    \[
+    p^*=\frac{E^*}{2} \approx \SI{7.74}{GeV}.
+    \]
+
+  \item       La velocit\`a del CM nel LAB \`e, in unit\`a di $c$, data da
+    \[
+    \beta_{CM}=\frac{|\vec{p_1}+\vec{p_2}|}{E_1+E_2}=
+    \frac{\sqrt{E_1^2-m^2} - \sqrt{E_2^2-m^2}}{E_1+E_2} \approx 
+    \frac{E_1-E_2}{E_1+E_2} \simeq 0.4
+    \]
+    di conseguenza:
+    \[
+    \gamma_{CM}=(1-\beta_{CM}^2)^{-1/2} \approx 1.1
+    \]
+
+    \item Nel caso in cui $E_1=E_2$ \`e evidente dalla relazione per $\beta_{CM}$ 
+      che i due sistemi di riferimento CM e LAB coincidono.
+  \end{enumerate}
+\end{Answer}
+
+\begin{Exercise}[title={Sezione d'urto, unit\`a di misura}]
+Nell'interazione neutrino-nucleone, ad alta energia, si pu\`o assumere 
+che la sezione d'urto (in unit\`a naturali) sia:
+\[
+\sigma_{\nu N}=\frac{2G_F^2 s}{9\pi}
+\]
+essendo $G_F$ la costante di Fermi ed $s$ il quadrato dell'energia
+totale nel sistema di riferimento del centro di massa. La costante di
+Fermi vale: $G_F=\SI{1.2e-5}{GeV^{-2}}$. Determinare l'energia dei
+neutrini in corrispondenza della quale la Terra diventa opaca ai
+neutrini, cio\`e essi non riescono pi\`u ad attraversarla (si assuma
+il raggio terrestre pari a \SI{6000}{Km}, la densit\`a media della
+Terra pari a \SI{2.15}{g/cm^3} e la massa del neutrino nulla).
+\end{Exercise}
+\begin{Answer}
+  Innanzitutto occorre trasformare la sezione d'urto dalle unit\`a
+  naturali alle unit\`a MKS. A tal fine teniamo conto che, misurando
+  $\sqrt{s}$ in GeV, in unit\`a naturali si ha:
+  \[
+  G_F^2 \cdot s = \SI{1.44e-10}{GeV^{-2}} \left(\frac{\sqrt{s}}{\SI{1}{GeV}}\right)^2.
+  \]
+  Sapendo che $\hbar c = \SI{197}{MeV fm} = \SI{1.97e-14}{GeV cm}$, si
+  ha che $\SI{1}{GeV^{-1}}$ in unit\`a naturali corrisponde a
+  \SI{1.97e-14}{cm} nel sistema MKS, dunque
+  \[
+  G_F^2 \cdot s=\SI{5.6e-38}{cm^2} \left(\frac{\sqrt{s}}{\SI{1}{GeV}}\right)^2.
+  \]
+  L'energia totale nel centro di massa si ottiene sfruttando l'invarianza sotto 
+  trasformazioni di Lorentz del modulo quadro del quadrimpulso. Si ha:
+  \[
+  s=M_p^2+M_{\nu}^2+2M_pE_\nu
+  \]
+  e quindi, trascurando i termini $M_\nu^2\approx \SI{0}{eV}$ ed $M_p^2$ ed usando $M_p=\SI{0.94}{GeV/c^2}$, si ottiene:
+  \[
+  s \approx 2M_pE_\nu \approx 1.88 \left (\frac{E_\nu}{\SI{1}{GeV}}\right ) \SI{}{GeV^2},
+  \]
+  dunque la sezione d'urto sar\`a:
+  \[
+  \sigma_{\nu N} = \frac{2\cdot \SI{5.6e-38}{cm^2} \left(\frac{\sqrt{s}}{\SI{1}{GeV}}\right)^2}{9\cdot3.14} \approx
+  \SI{7.9e-39}{\frac{E_\nu}{1 GeV}cm^2}
+  \]
+  L'interazione in esame \`e tra neutrino e nucleone per cui il 
+  numero di nucleoni (centri diffusori o bersagli dello scattering) per unit\`a di volume sar\`a:
+  \[
+  n=\rho/M_p=N_A\rho \approx \SI{1.3e24}{cm^{-3}}.
+  \]
+  La lunghezza di interazione \`e quindi:
+  \[
+  \lambda=\frac{1}{n\sigma} \approx \SI{1.0e14}{\left (\frac{E_\nu}{1 GeV}\right )^{-1} cm}.
+  \]
+  Una stima dell'energia dei neutrini per cui la Terra diventa opaca
+  ai $\nu$ si ottiene imponendo $\lambda<D$, essendo D=\SI{1.2e9}{cm}
+  il diametro della Terra.  Da tale condizione segue che la Terra
+  diventa opaca ai neutrini per:
+  \[
+  E_{\nu}>\SI{8.7e4}{GeV}
+  \]
+\end{Answer}
+
+
+\begin{Exercise}[title={Effetto fotoelettrico, unit\`a di misura}]
+In un esperimento di Fisica dei Materiali si intende studiare l'effetto 
+fotoelettrico inviando fotoni di lunghezza d'onda $\lambda=\SI{200}{nm}$ su una 
+lastrina d'argento. Sapendo che l'energia necessaria per estrarre un $e^-$ 
+dall'atomo di argento \`e $W=\SI{4.73}{eV}$, stabilire se l'effetto fotoelettrico 
+si realizza e, in caso affermativo,  determinare l'energia cinetica degli 
+elettroni che fuoriescono dal metallo.
+\end{Exercise}
+\begin{Answer}
+  L'energia dei fotoni che incidono sulla lastrina di Argento \`e:
+  \[
+  E_\gamma = \frac{h c}{\lambda}
+  \]
+  Usando la relazione $\hbar c = \SI{197}{MeV fm} = \SI{1.97e-14}{GeV cm}$, si pu\`o esprimerla in eV:
+  \[
+  E_\gamma = \SI{6.2}{eV}.
+  \]
+  Segue pertanto  che \'e possibile realizzare l'effetto fotoelettrico essendo $E_\gamma>W$. 
+  Infine, l'energia cinetica degli elettroni emessi \`e:
+  \[
+  E_K = E_\gamma-W = \SI{1.47}{eV}.
+  \]
+\end{Answer}
+
+\begin{Exercise}[title={Cinematica relativistica, decadimento di particelle}]
+L'impulso pi\`u probabile dei pioni $\pi^+$ che vengono prodotti al
+Fermilab di Chicago, inviando un fascio di protoni di impulso
+$p_p=\SI{400}{GeV/c}$ su un bersaglio sottile, \`e quello per cui i
+$\pi^+$ hanno la stessa velocit\`a dei protoni incidenti.
+
+\Question Calcolare l'impulso dei pioni carichi prodotti
+
+\Question Una volta prodotti i pioni entrano in un tunnel di lunghezza
+$x=\SI{400}{m}$ in cui alcuni decadono.  Calcolare la frazione dei
+pioni che decadono nel tunnel, sapendo che il tempo di vita medio
+proprio dei pioni carichi \`e $\tau_0^\pi=\SI{2.6e-8}{s}$.
+
+\Question Calcolare la lunghezza del tunnel misurata da un osservatore
+solidale al pione
+
+Si usi: $m_\pi=\SI{139.6}{MeV/c^2}$, $m_p=\SI{0.938}{GeV/c^2}$.
+\end{Exercise}
+
+\begin{Answer}
+  \begin{enumerate}
+  \item Per un protone di impulso $p_p$:
+    \[
+    \beta \gamma = \frac{p_p}{c m_p} = \frac{p_p c}{m_p c^2} = 426
+    \]
+    Un pione con lo stesso $\beta \gamma$ ha impulso:
+    \[
+    p_{\pi} = m_{\pi} c \beta \gamma = \SI{59.5}{GeV/c}
+    \]
+
+  \item La frazione di pioni che decadono nel tunnel \`e 
+    \[
+    1 - \frac{N(x)}{N_0} = 1 - e^{-\frac{x}{\beta \gamma c \tau^\pi_0}} = 11.3\%
+    \]
+
+  \item Dato che 
+    \beqn
+    \beta^2 &=& 1 - \frac{1}{\gamma^2} \Rightarrow (\beta \gamma)^2 = \gamma^2 -1 \\
+    \gamma &=& \sqrt{(\beta \gamma)^2 +1} \simeq \beta \gamma = 426
+    \eeqn
+    
+    La lunghezza del tunnel, misurata da un osservatore solidale al pione \`e:
+    \[
+    x' = \frac{x}{\gamma} = \frac{\SI{400}{m}}{426} = \SI{94}{cm}
+    \]
+  \end{enumerate}
+\end{Answer}
+
