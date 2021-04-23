@@ -1,4 +1,4 @@
-\begin{Exercise}[title={Riepilogo: cinematica, ionizzazione, Cerenkov}]
+\begin{Exercise}[title={Cinematica, ionizzazione, Cerenkov}]
   Il rivelatore SuperKamiokande \`e un grosso cilindro verticale riempito di acqua (indice di rifrazione $n=1.33$,
   densit\`a $\rho=\SI{1}{g/cm^3}$). I neutrini atmosferici di tipo muonico ($\nu_\mu$) sono studiati rivelando la luce
   Cherenkov emessa dai muoni prodotti nell'interazione con i nuclei dell'acqua. Assumendo che si vogliono misurare soltanto
@@ -83,7 +83,82 @@
   \end{enumerate}
 \end{Answer}
 
-\begin{Exercise}[title={Riepilogo: energia di soglia, angolo di apertura nel laboratorio}]
+\begin{Exercise}[title={Spettrometro magnetico, perdite di energia, multiplo scattering}]
+  Un fascio di elettroni e pioni negativi aventi un impulso
+  $p=\SI{50}{GeV/c}$ attraversa un magnete lungo $L=\SI{2}{m}$ che
+  produce un campo magnetico uniforme $B =\SI{2.2}{T}$. All’uscita del
+  magnete \`e posto uno scintillatore plastico di spessore $\Delta
+  x=\SI{2}{cm}$, densit\`a $\rho = \SI{1.03}{gcm^{-3}}$ e lunghezza di
+  radiazione $X_0=\SI{40}{cm}$. Determinare:
+
+  \Question il raggio di curvatura $R$ e l’angolo di deviazione per i pioni
+
+  \Question la distanza dalla linea di volo iniziale  con cui escono dal magnete i pioni
+
+  \Question l’energia persa dai pioni e dagli elettroni nell’attraversare lo scintillatore (si trascuri
+  l’effetto densit\`a $\delta(\gamma)$)
+
+  \Question l’angolo medio di deviazione dovuto allo scattering multiplo Coulombiano (nell’attraversare lo
+  scintillatore) per entrambe le particelle
+
+  Si usino $m_{\pi^-}=\SI{139.6}{MeV/c^2}$, $\langle I \rangle = \SI{200}{eV}$, $Z/A=0.5$, $m_e=\SI{0.511}{MeV/c^2}$.
+
+\end{Exercise}
+\begin{Answer}
+  \begin{enumerate}
+  \item Il raggio di curvatura, per una particella che si muove in un campo magnetico ortogonale al suo moto, misurato in unit\`a MKS, \`e:
+    \[
+    R [m] = \frac{p[GeV/c] c}{0.3 B[T]} = \SI{75.76}{m}
+    \]
+
+  \item Nell'approssimazione di piccolo angolo, l'angolo sotteso
+    dall'arco di circonferenza descritto dalla particella \`e:
+    \[
+    \theta = \arcsin\left(\frac{L}{R}\right) \approx \frac{L}{R} = \SI{0.026}{rad} (=1.5^\circ)
+    \]
+    e quindi la distanza dalla linea di volo iniziale con cui i pioni escono dal magnete \`e:
+    \[
+    x = R(1-\cos\theta) \approx \SI{3.0}{cm}
+    \]
+
+  \item Il meccanismo principale di perdita di energia per i pioni \`e quello della ionizzazione, ed \`e dato dalla
+    formula di Bethe-Bloch:
+    \[
+    \dv{E}{x} = C \cdot \rho \left(\frac{Z}{A}\right) \left( \frac{z^2}{\beta^2} \right)
+    \left[\ln\left(\frac{2m_e c^2(\beta\gamma)^2}{\langle I \rangle}\right) -\beta^2 \right]
+    \]
+    in cui la costante $C \approx \SI{0.3}{MeV/cm}$, e trascuriamo l'effetto di densit\`a.
+    Il valore di perdita di energia medio \`e quindi:
+    \[
+    \dv{E}{x} = \SI{2.98}{MeV/cm}
+    \]
+    e, considerando questa perdita di energia circa costante lungo il tratto percorso, la perdita di energia totale \`e:
+    \[
+    \Delta E = \dv{E}{x} \cdot \Delta x =  \SI{2.98}{MeV/cm} \cdot \SI{2}{cm} = \SI{5.96}{MeV}
+    \]
+    Per degli elettroni, invece, la perdita di energia principale \`e per irragiamento, e l'andamento
+    dell'energia, in funzione della profondit\`a del mezzo attraversato, \`e:
+    \[
+    E(x) = E_0 e^{x/X_0}
+    \]
+    A una prodondit\`a $x=\SI{2}{cm}$ si ha quindi $E=\SI{47.56}{GeV}$, e quindi la perdita \`e:
+    \[
+    \Delta E = E_0 - E(\SI{2}{cm}) = \SI{2.43}{GeV}
+    \]
+
+  \item Lo scattering Coulombiamo produce una variazione nell’angolo data dalla formula:
+    \[
+    \langle \bar \theta_{MS} \rangle = \SI{13.6}{MeV} \frac{z}{pc\beta}\sqrt{\frac{x}{X_0}}
+    \]
+    usando i valori numerici $z=1$, $\beta\approx 1$, $p=\SI{50000}{MeV/c}$ si ottiene
+    \[
+    \langle \bar \theta_{MS} \rangle = \SI{9.5e-5}{rad} = 0.005^\circ
+    \]
+   \end{enumerate}
+\end{Answer}
+
+
+\begin{Exercise}[title={Energia di soglia, angolo di apertura nel laboratorio}]
   Un fascio di pioni carichi interagisce con un bersaglio di protoni
   fermi nel sistema di riferimento del laboratorio. Si vuole studiare
   la reazione $\pi^- + p \rightarrow \Lambda^0 + L^0$. Calcolare
@@ -221,3 +296,136 @@ sopra ma con $E_1=E_2$, la relazione che intercorre tra CM e LAB.
       che i due sistemi di riferimento CM e LAB coincidono.
   \end{enumerate}
 \end{Answer}
+
+\begin{Exercise}[title={Sezione d'urto, unit\`a di misura}]
+Nell'interazione neutrino-nucleone, ad alta energia, si pu\`o assumere 
+che la sezione d'urto (in unit\`a naturali) sia:
+\[
+\sigma_{\nu N}=\frac{2G_F^2 s}{9\pi}
+\]
+essendo $G_F$ la costante di Fermi ed $s$ il quadrato dell'energia
+totale nel sistema di riferimento del centro di massa. La costante di
+Fermi vale: $G_F=\SI{1.2e-5}{GeV^{-2}}$. Determinare l'energia dei
+neutrini in corrispondenza della quale la Terra diventa opaca ai
+neutrini, cio\`e essi non riescono pi\`u ad attraversarla (si assuma
+il raggio terrestre pari a \SI{6000}{Km}, la densit\`a media della
+Terra pari a \SI{2.15}{g/cm^3} e la massa del neutrino nulla).
+\end{Exercise}
+\begin{Answer}
+  Innanzitutto occorre trasformare la sezione d'urto dalle unit\`a
+  naturali alle unit\`a MKS. A tal fine teniamo conto che, misurando
+  $\sqrt{s}$ in GeV, in unit\`a naturali si ha:
+  \[
+  G_F^2 \cdot s = \SI{1.44e-10}{GeV^{-2}} \left(\frac{\sqrt{s}}{\SI{1}{GeV}}\right)^2.
+  \]
+  Sapendo che $\hbar c = \SI{197}{MeV fm} = \SI{1.97e-14}{GeV cm}$, si
+  ha che $\SI{1}{GeV^{-1}}$ in unit\`a naturali corrisponde a
+  \SI{1.97e-14}{cm} nel sistema MKS, dunque
+  \[
+  G_F^2 \cdot s=\SI{5.6e-38}{cm^2} \left(\frac{\sqrt{s}}{\SI{1}{GeV}}\right)^2.
+  \]
+  L'energia totale nel centro di massa si ottiene sfruttando l'invarianza sotto 
+  trasformazioni di Lorentz del modulo quadro del quadrimpulso. Si ha:
+  \[
+  s=M_p^2+M_{\nu}^2+2M_pE_\nu
+  \]
+  e quindi, trascurando i termini $M_\nu^2\approx \SI{0}{eV}$ ed $M_p^2$ ed usando $M_p=\SI{0.94}{GeV/c^2}$, si ottiene:
+  \[
+  s \approx 2M_pE_\nu \approx 1.88 \left (\frac{E_\nu}{\SI{1}{GeV}}\right ) \SI{}{GeV^2},
+  \]
+  dunque la sezione d'urto sar\`a:
+  \[
+  \sigma_{\nu N} = \frac{2\cdot \SI{5.6e-38}{cm^2} \left(\frac{\sqrt{s}}{\SI{1}{GeV}}\right)^2}{9\cdot3.14} \approx
+  \SI{7.9e-39}{\frac{E_\nu}{1 GeV}cm^2}
+  \]
+  L'interazione in esame \`e tra neutrino e nucleone per cui il 
+  numero di nucleoni (centri diffusori o bersagli dello scattering) per unit\`a di volume sar\`a:
+  \[
+  n=\rho/M_p=N_A\rho \approx \SI{1.3e24}{cm^{-3}}.
+  \]
+  La lunghezza di interazione \`e quindi:
+  \[
+  \lambda=\frac{1}{n\sigma} \approx \SI{1.0e14}{\left (\frac{E_\nu}{1 GeV}\right )^{-1} cm}.
+  \]
+  Una stima dell'energia dei neutrini per cui la Terra diventa opaca
+  ai $\nu$ si ottiene imponendo $\lambda<D$, essendo D=\SI{1.2e9}{cm}
+  il diametro della Terra.  Da tale condizione segue che la Terra
+  diventa opaca ai neutrini per:
+  \[
+  E_{\nu}>\SI{8.7e4}{GeV}
+  \]
+\end{Answer}
+
+
+\begin{Exercise}[title={Effetto fotoelettrico, unit\`a di misura}]
+In un esperimento di Fisica dei Materiali si intende studiare l'effetto 
+fotoelettrico inviando fotoni di lunghezza d'onda $\lambda=\SI{200}{nm}$ su una 
+lastrina d'argento. Sapendo che l'energia necessaria per estrarre un $e^-$ 
+dall'atomo di argento \`e $W=\SI{4.73}{eV}$, stabilire se l'effetto fotoelettrico 
+si realizza e, in caso affermativo,  determinare l'energia cinetica degli 
+elettroni che fuoriescono dal metallo.
+\end{Exercise}
+\begin{Answer}
+  L'energia dei fotoni che incidono sulla lastrina di Argento \`e:
+  \[
+  E_\gamma = \frac{h c}{\lambda}
+  \]
+  Usando la relazione $\hbar c = \SI{197}{MeV fm} = \SI{1.97e-14}{GeV cm}$, si pu\`o esprimerla in eV:
+  \[
+  E_\gamma = \SI{6.2}{eV}.
+  \]
+  Segue pertanto  che \'e possibile realizzare l'effetto fotoelettrico essendo $E_\gamma>W$. 
+  Infine, l'energia cinetica degli elettroni emessi \`e:
+  \[
+  E_K = E_\gamma-W = \SI{1.47}{eV}.
+  \]
+\end{Answer}
+
+\begin{Exercise}[title={Cinematica relativistica, decadimento di particelle}]
+L'impulso pi\`u probabile dei pioni $\pi^+$ che vengono prodotti al
+Fermilab di Chicago, inviando un fascio di protoni di impulso
+$p_p=\SI{400}{GeV/c}$ su un bersaglio sottile, \`e quello per cui i
+$\pi^+$ hanno la stessa velocit\`a dei protoni incidenti.
+
+\Question Calcolare l'impulso dei pioni carichi prodotti
+
+\Question Una volta prodotti i pioni entrano in un tunnel di lunghezza
+$x=\SI{400}{m}$ in cui alcuni decadono.  Calcolare la frazione dei
+pioni che decadono nel tunnel, sapendo che il tempo di vita medio
+proprio dei pioni carichi \`e $\tau_0^\pi=\SI{2.6e-8}{s}$.
+
+\Question Calcolare la lunghezza del tunnel misurata da un osservatore
+solidale al pione
+
+Si usi: $m_\pi=\SI{139.6}{MeV/c^2}$, $m_p=\SI{0.938}{GeV/c^2}$.
+\end{Exercise}
+
+\begin{Answer}
+  \begin{enumerate}
+  \item Per un protone di impulso $p_p$:
+    \[
+    \beta \gamma = \frac{p_p}{c m_p} = \frac{p_p c}{m_p c^2} = 426
+    \]
+    Un pione con lo stesso $\beta \gamma$ ha impulso:
+    \[
+    p_{\pi} = m_{\pi} c \beta \gamma = \SI{59.5}{GeV/c}
+    \]
+
+  \item La frazione di pioni che decadono nel tunnel \`e 
+    \[
+    1 - \frac{N(x)}{N_0} = 1 - e^{-\frac{x}{\beta \gamma c \tau^\pi_0}} = 11.3\%
+    \]
+
+  \item Dato che 
+    \beqn
+    \beta^2 &=& 1 - \frac{1}{\gamma^2} \Rightarrow (\beta \gamma)^2 = \gamma^2 -1 \\
+    \gamma &=& \sqrt{(\beta \gamma)^2 +1} \simeq \beta \gamma = 426
+    \eeqn
+    
+    La lunghezza del tunnel, misurata da un osservatore solidale al pione \`e:
+    \[
+    x' = \frac{x}{\gamma} = \frac{\SI{400}{m}}{426} = \SI{94}{cm}
+    \]
+  \end{enumerate}
+\end{Answer}
+
