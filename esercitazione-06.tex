@@ -1,0 +1,140 @@
+\begin{Exercise}
+  Il rivelatore SuperKamiokande \`e un grosso cilindro verticale riempito di acqua (indice di rifrazione $n=1.33$,
+  densit\`a $\rho=\SI{1}{g/cm^3}$). I neutrini atmosferici di tipo muonico ($\nu_\mu$) sono studiati rivelando la luce
+  Cherenkov emessa dai muoni prodotti nell'interazione con i nuclei dell'acqua. Assumendo che si vogliono misurare soltanto
+  i muoni di impulso fino a $p_\textrm{max}=\SI{1}{GeV/c}$ si determini:
+  \Question qual \`e il percorso massimo dei muoni nell'acqua, considerando un percorso rettilineo e trascurando
+  l'effetto del multiplo scattering
+  \Question per quale parte di questo percorso il muone emette luce Cherenkov
+  \Question qual \`e il raggio del cerchio illuminato sulla base del cilindro da un muone di impulso $p_\mu=\SI{1}{GeV/c}$ prodotto
+  lungo l'asse del cilindro, ad un'altezza $h=\SI{50}{cm}$ dalla base stessa
+\end{Exercise}
+\begin{Answer}
+  \begin{enumerate}
+  \item La perdita di energia per i muoni nell'acqua \`e principalmente dovuta alla ionizzazione, mentre il
+    contributo della perdita di energia per emissione di luce Cerenkov \`e circa mille volte inferiore.
+    I muoni hanno massa $m_\mu=\SI{106}{MeV/c^2}$, e quindi il loro fattore di Lorentz \`e:
+    \[
+    \beta\gamma = \frac{p}{m_\mu c}=\frac{\SI{1}{GeV/c}}{\SI{0.106}{GeV/c}} = 9.4
+    \]
+    A questo valore la perdita di energia \`e ancora ben approssimata
+    dal valore al minimo della ionizzazione (\`e solo l'inizio della
+    salita relativistica, che \`e logaritmica). Quindi si pu\`o
+    assumere una perdita di energia circa costante, e pari a
+    $\dv{E}{x}\vert_\textrm{min}\approx\SI{2}{MeV/g \cdot cm^{-2}}$.
+    L'energia cinetica massima dei muoni che si vogliono considerare \`e:
+    \[
+    K_\textrm{max} = \sqrt{p_\textrm{max}^2+m_\mu^2} - m_\mu \approx \SI{900}{MeV}
+    \]
+    e quindi il percorso massimo \`e dato da:
+    \[
+    d_\textrm{max} = \frac{K_\textrm{max}}{\rho\cdot\dv{E}{x}\vert_\textrm{min}} \approx \SI{4.5}{m}
+    \]
+
+  \item Il muone emette luce Cherenvov finch\'e il suo impulso \`e superiore alla soglia:
+    \[
+    \beta > \beta_\textrm{min} = \frac{1}{n} \approx 0.75
+    \]
+    e quindi:
+    \beqn
+    \frac{p}{E} &>& \beta_\textrm{min} \Rightarrow \frac{p}{p^2+m_\mu^2} > \beta_\textrm{min}
+    \Rightarrow p^2 >  \beta_\textrm{min} (p^2+m_\mu^2) \\
+    &\Rightarrow& p>\frac{\beta_\textrm{min} m_\mu}{\sqrt{1-\beta_\textrm{min}}} \approx \SI{120}{MeV/c} \equiv p_\textrm{min}
+    \eeqn
+    e quindi l'energia cinetica minima \`e:
+    \[
+    K_\textrm{min} = \sqrt{p_\textrm{min}^2+m_\mu^2} - m_\mu^2 \approx \SI{54}{MeV}
+    \]
+    Mentre il muone viaggia nell'acqua, perde energia per
+    ionizzazione, come fatto nel punto precedente, fino a raggiungere
+    $K_\textrm{min}$. Sempre approssimando la perdita di energia come
+    una costante (che \`e ancora un'approssimazione abbastanza buona per $p_\textrm{min}\approx \SI{100}{MeV}$), si ha
+    che il percorso durante il quale il muone emette luce Cherenkov \`e:
+    \[
+    L = \frac{K_0 -
+      K_\textrm{min}}{\rho\cdot\dv{E}{x}\vert_\textrm{min}} =
+    \frac{\SI{900}{MeV}-\SI{54}{MeV}}{\SI{2}{MeV/cm}} \approx
+    \SI{4.2}{m}
+    \]
+    Quindi la frazione del percorso massimo dei muoni in cui questo avviene \`e:
+    \[
+    f = \frac{L}{d_\textrm{max}} = \frac{\SI{4.2}{m}}{\SI{4.5}{m}} = 93\%
+    \]
+
+  \item Un mone di impulso \SI{1}{GeV/c} emette luce Cherenkov su un cono di apertura:
+    \[
+    \cos\theta_C = \frac{1}{\beta n}
+    \]
+    dove $\beta = p/E = p/\sqrt{p^2+m_\mu^2}=0.9944$ e quindi 
+    \[
+    \cos\theta_C = \frac{1}{0.9944\cdot 1.33} \approx 0.756
+    \]
+    durante il suo percorso verso la base, il vertice di emissione
+    della luce si avvicina, e quindi i successivi coni di luce sono
+    contenuti nel primo. Inoltre, perdendo energia, il $\beta$
+    diminuice, e quindi $\cos\theta_C$ aumenta, e quindi anche
+    $\theta_C$ diminuisce, cntribuendo a rendere i coni successivi
+    contenuti nel primo.  Quindi la zona illuminata \`e interna al
+    cerchi dell'emissione avvenuta alla distanza $h=\SI{50}{cm}$ dalla
+    base:
+    \[
+    R = h \tan\theta_C = h \frac{\sqrt{1-\cos^2\theta_C}}{\cos\theta_C} \approx 0.865 \cdot h \approx \SI{43}{cm}
+    \]
+  \end{enumerate}
+\end{Answer}
+
+\begin{Exercise}
+  Un fascio di pioni carichi interagisce con un bersaglio di protoni
+  fermi nel sistema di riferimento del laboratorio. Si vuole studiare
+  la reazione $\pi^- + p \rightarrow \Lambda^0 + L^0$. Calcolare
+  l'energia minima del pione affinch\'e la reazione possa avvenire.
+  Le masse delle particelle della reazione sono:
+  $m_\pi=\SI{140}{MeV/c^2}$, $m_p=\SI{938}{MeV/c^2}$,
+  $m_\Lambda=\SI{1116}{MeV/c^2}$, $m_K=\SI{498}{MeV/c^2}$
+  
+  \Question Se l'energia del fascio \`e $E_\pi=\SI{2.0}{GeV}$,
+  calcolare, se esiste, l'angolo massimo nel laboratorio con cui viene
+  emessa la particella $\Lambda^0$. 
+\end{Exercise}
+\begin{Answer}
+  L'energia di soglia del pione \`e la minima necessaria per produrre
+  le particelle finali a riposo nel sistema di riferimento del centro
+  di massa ($E_\textrm{min}$). Uguagliando la massa invariante dello
+  stato iniziale e finale nel centro di massa: \beqn
+  \sqrt{s}_\textrm{in} = \sqrt{E_\textrm{min} + m_p} \\
+  \sqrt{s}_\textrm{fin} = \sqrt{m_K + m_\Lambda} \eeqn elevando al
+  quadrato ed uguagliando le masse invarianti si ottiene:
+  \beqn
+  E^2_\textrm{min} + m_p^2 + 2E_\textrm{min}m_p =  (m_K + m_\Lambda)^2 \\
+  \Rightarrow E_\textrm{min} = \frac{(m_K + m_\Lambda)^2 - m_\pi^2 - m_p^2}{2m_p} \approx \SI{0.91}{GeV}
+  \eeqn
+
+  L'angolo massimo di emissione nel laboratorio esiste solo nel caso in cui la velocit\`a della particella
+  nel centro di massa, $\beta^*$, \`e minore della velocit\`a del centro di massa nel laboratorio, $\beta^{cm}$:
+  \[
+  \beta^* < \beta^{cm} = \frac{p_{cm}}{E_{cm}} = \frac{\sqrt{E_\pi^2-m_\pi^2}}{E_\pi+m_p} \approx 0.665
+  \]
+  Per verificare se la condizione \`e possibile bisogna calcolare l'impulso e l'energia della $\Lambda^0$ nel centro di massa.
+  L'energia totale del centro di massa \`e:  
+  \[
+  E^*_\textrm{tot} = \sqrt{m_p^2+m_\pi^2+2E_\pi m_p} \approx \SI{2.16}{GeV}
+  \]
+  Usando la conservazione dell'energia nel centro di massa, e chiamando $p^* \equiv \vert \vec p^*_\Lambda\vert = \vert \vec p^*_K\vert$,
+  si pu\`o calcolare l'impulso della $\Lambda^0$ nel centro di massa:
+  \[
+  E^*_\textrm{tot} = E^*_\Lambda + E^*_K = \sqrt{{p^*}^2+m_\Lambda^2} + \sqrt{{p^*}^2+m_K^2}
+  \]
+  elevando due volte al quadrato e risolvendo l'equazione in $p^*$ si ottiene
+  \[
+  p^* = \frac{\sqrt{[{E^*}^2-(m_\Lambda + m_K)^2][{E^*}^2-(m_\Lambda - m_K)^2]}}{2E^*} \approx \SI{0.69}{GeV/c}
+  \]
+  da cui si ricava:
+  \[
+  \beta^* = \frac{p^*}{E^*} = \frac{p^*}{{p^*}^2+m_\Lambda^2} \approx 0.52.
+  \]
+  Quindi la condizione $\beta^*<\beta_{cm}$ \`e soddisfatta, per cui esiste un angolo massimo di emissione della particella $\Lambda^0$ nel laboratorio.
+  Questo angolo \`e:
+  \[
+  \theta_{max} = \atan \left\{ \left[ \gamma_{cm}\sqrt{\left(\frac{\beta_{cm}}{\beta^*}\right)^2-1}\right]^{-1}\right\} \approx 42^\circ
+  \]
+\end{Answer}
