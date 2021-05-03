@@ -1,0 +1,197 @@
+\begin{Exercise}[title={Densit\`a nucleare e unit\`a di misura}]
+  Si stimi la densit\`a nucleare in $\SI{}{g cm^3}$, approssimando $m_p = m_n = \SI{938.3}{MeV/c^2}$.
+\end{Exercise}
+\begin{Answer}
+Un elettronVolt (eV) \`e l'energia cinetica acquistata da una
+particella di carica elementare $e =\SI{1.602e-19}{C}$ che passa
+attraverso la differenza di potenziale di un Volt, per cui:
+\[
+\SI{1}{eV} = \SI{1.602e-19}{J}.
+\]
+Il fattore di conversione tra massa (che in relativit\`a \`e equivalente a un'energia) \`e dato da:
+\[
+E(\SI{1}{kg} = \SI{1}{kg c^2} = \SI{9e16}{kg(m/s)^2} = \SI{9e16}{J}
+\]
+e poich\'e $\SI{1}{J}=1/\SI{1.6e-19}{eV}$ si ha:
+\[
+\SI{1}{kg c^2} = \frac{9e16}{1.6e-19}\SI{}{eV} = \SI{5.6e35}{eV} 
+\]
+da cui:
+\[
+\SI{1}{kg} = \SI{5.6e35}{eV/c^2} 
+\]
+Quindi la massa del protone, espressa in kg, vale:
+\[
+m_p = \SI{9.383e8}{eV/c^2} = \frac{\SI{9.383e8}{}}{\SI{5.6e35}{}}\SI{}{kg} = \SI{1.67e-27}{kg}
+\]
+
+Il testo dice di considerare $m_n \approx m_p = \SI{1.67e-24}{kg}$. Quindi usando il raggio del nucleo:
+\[
+R = R_0 \cdot A^{1/3}
+\]
+con $R_0=\SI{1.2}{fm}$, che \`e valido per grandi valori di $A$, si ottiene:
+\beqn
+\rho &=& \frac{M}{V} = \frac{A\cdot m_p}{4/3 \pi R_0^3 A} = \frac{3 m_p}{4\pi R_0^3} \\
+&=& \frac{3 \times \SI{1.67e-27}{g}}{12.56 \times (\SI{1.2e-13}{cm})^3} \approx \SI{2.3e14}{g/cm^3}
+\eeqn
+\end{Answer}
+
+\begin{Exercise}[title={Termine coulombiano della formula di Weiszacker}]
+Considerando che l'energia elettrostatica di una carica $Q$
+uniformemente distribuita su una sfera di raggio $R$ \`e uguale a
+$\frac{3}{5}\cdot\frac{Q^2}{4\pi\epsilon_0 R}$, stimare il termine
+coulombiano della formula semi-empirica delle masse dei nuclei.
+\end{Exercise}
+\begin{Answer}
+La carica del nucleo \`e $Q=Ze$, mentre il raggio del nucleo si pu\`o stimare con:
+\[
+R = R_0 \cdot A^{1/3}
+\]
+dove $R_0=\SI{1.2}{fm}$, che \`e valido per grandi valori di $A$.
+Il termine coulombiano della formula di Weiszacker \`e quello proporzionale a $1/R$, quindi:
+\[
+\frac{3Z^2e^2}{20\pi \epsilon_0 R_0A^{1/3}} = a_C \cdot \frac{Z^2}{A^{1/3}}
+\]
+da cui si ricava il coefficiente $a_C$ del termine coulombiano, fattorizzandolo in modo opportuno da
+evidenziare delle costanti di cui sappiamo il valore:
+\[
+a_C = \frac{3}{5}\times\frac{e^2}{4\pi\epsilon_0}\times\frac{1}{R_0} =
+0.6\times k e^2 \times \frac{1}{\SI{1.2}{fm}} 
+\]
+usando il valore della costante di Coulomb:
+\[
+k e^2 = \frac{\SI{197}{MeV \cdot fm}}{137}=\SI{1.44}{MeV \cdot fm}
+\]
+si ottiene:
+\[
+a_C \approx \SI{0.7}{MeV}
+\]
+che \`e una buona approssimazione per tale costante.
+\end{Answer}
+
+\begin{Exercise}[title={Termine coulombiano della formula di Weiszacker}]
+  Gli stati stabili di \ce{^{13}_{6}C} e \ce{^{13}_7N} appartengono
+  allo stesso doppietto di isospin, e la loro differenza di massa \`e
+  dovuta principalmente dalla diversa energia coulombiana, e in modo
+  sottodominante dalla differenza di massa tra neutrone e protone.
+
+  \Question Considerando entrambe le cause di differenza di massa, si
+  stimi la differenza di massa dei due nuclei.
+\end{Exercise}
+\begin{Answer}
+  Come nell'esercizio precedente, approssimando la carica elettrostatica come uniformemente
+  distribuita in delle sfere di raggio $R=R_0 A^{1/3}$, con $R_0 = \SI{1.2}{fm}$, la loro
+  energia elettrostatica \`e, per una carica $Q$:
+  \[
+  E_C = \frac{3}{5}\times\frac{Q^2}{4\pi\epsilon_0 R}
+  \]
+  Poich\'e il \ce{^{13}_7N} ha un protone in pi\`u rispetto al \ce{^{13}_{6}C}, esso avr\`a un'energia coulombiana maggiore.
+  Per\`o bisogna considerare che il neutrone ha minor massa rispetto al protone:
+  \[
+  M_n - M_p - m_e = \SI{0.782}{MeV/c^2}
+  \]
+  Quindi la differenza di massa tra i due nuclei \`e data da:
+  \beqn
+      [M(\ce{^{13}_7N}) - M(\ce{^{13}_{6}C})] &=& \frac{3}{5R\times 4\pi\epsilon_0}(Q^2_N-Q^2_C) - [M_n - M_p - m_e] \\
+      &=& \frac{3}{5R}\left(\frac{e^2}{4\pi\epsilon_0}\right)(7^2-6^2) - \SI{0.782}{MeV} \\
+      &=& 0.6 \times \SI{1.44}{MeV\cdot fm} \times \frac{49-36}{\SI{1.2}{fm}\times 13^{1/3}} - \SI{0.782}{MeV} \\
+      &\approx& \SI{2.62}{MeV}
+  \eeqn
+\end{Answer}
+
+\begin{Exercise}[title={Applicazione della legge di Geiger-Nuttal al decadimento $\alpha$}]
+  La relazione di Geiger-Nuttal lega in modo semplice la costante di decadimento ($\lambda$) della
+  radioattivit\`a naturale $\alpha$ e l'energia della particella $\alpha$ ($E_\alpha$) emessa.
+
+  \Question Usando tale legge, si stimi l'ordine di grandezza per il
+  tempo di dimezzamento del \ce{^{210}Po}, che decade emettendo
+  $E_\alpha=\SI{5.3}{MeV}$, sapendo che il \ce{^{214}Po} ha un tempo
+  di dimezzamento di $\SI{1.6e-4}{s}$, ed emette una particella
+  $\alpha$ con $E_\alpha={7.7}{MeV}$.
+\end{Exercise}
+\begin{Answer}
+  Per radionuclidi della stessa serie che decadono emettendo particelle $\alpha$, la legge di Geiger--Nuttal lega in
+  modo lineare $\ln \lambda$ e $1/\sqrt{E_\alpha}$. Per il \ce{_{84}Po} si ha:
+  \[
+  \ln \lambda \approx a - \frac{Z-2}{E_\alpha}b
+  \]
+  Per i due isotopi del \ce{_{84}Po}, che hanno lo stesso $Z=84$, si ha:
+  \beqn
+  \ln \lambda(\ce{^{210}Po}) &\approx& a - \frac{Z-2}{E_\alpha(\ce{^{210}Po})}b \\
+  \ln \lambda(\ce{^{214}Po}) &\approx& a - \frac{Z-2}{E_\alpha(\ce{^{214}Po})}b
+  \eeqn
+  poich\'e le costanti $a$ e $b$ sono debolmente dipendenti per gli
+  isotopi, sottraendo dalla seconda la prima equazione si ottiene:
+  \[
+  \ln \lambda(\ce{^{214}Po}) - \ln \lambda(\ce{^{210}Po}) = b (Z-2)\left[\frac{1}{E_\alpha(\ce{^{210}Po})} - \frac{1}{E_\alpha(\ce{^{210}Po})}\right]
+  \]
+  ovvero:
+  \[
+  \ln \frac{\lambda(\ce{^{214}Po})}{\lambda(\ce{^{210}Po})} = b (Z-2)\left[\frac{1}{\sqrt{E_\alpha(\ce{^{210}Po})}} - \frac{1}{\sqrt{E_\alpha(\ce{^{210}Po})}}\right]
+  \]
+  Sappiamo che la costante $b$ \`e pari a:
+  \[
+  b \equiv \frac{e^2\sqrt{2m_\alpha}}{2\hbar\epsilon_0} = \frac{2\pi e^2\sqrt{2m_\alpha}}{4\pi\hbar\epsilon_0}
+  =2\pi \frac{ke^2\sqrt{2m_\alpha c^2}}{\hbar c}= 6.28 \frac{\SI{1.44}{MeV\cdot fm} \cdot \sqrt{2\cdot\SI{3727}{MeV/c^2}}}{\SI{197}{MeV\cdot fm}} \approx \SI{4}{MeV^{1/2}}
+  \]
+  Per avere una stima del rapporto in ordini di grandezza tra i due tempi di dimezzamento consideriamo che:
+  \[
+  \ln \frac{\lambda(\ce{^{214}Po})}{\lambda(\ce{^{210}Po})} = \ln \frac{t_{1/2}(\ce{^{210}Po})}{t_{1/2}(\ce{^{214}Po})}
+  \]
+  e quindi
+  \beqn
+  \log_{10}\frac{t_{1/2}(\ce{^{210}Po})}{t_{1/2}(\ce{^{214}Po})} &=& \frac{1}{\ln(10)} \ln \frac{t_{1/2}(\ce{^{210}Po})}{t_{1/2}(\ce{^{214}Po})} \\
+  &\approx&0.434 \times  \SI{4}{MeV^{1/2}} \times(84-2)\times
+  \left[\frac{1}{\sqrt{\SI{5.3}{MeV}}} - \frac{1}{\sqrt{\SI{7.7}{MeV}}}\right] \approx 10.5
+  \eeqn
+  Le vite medie dei due nuclidi differiscono di ben 10 ordini di grandezza. Conoscendo quindi il tempo di dimezzamento
+  del \ce{^{214}Po} si trova il valore numerico della vita media del \ce{^{210}Po}:
+
+  \[
+  t_{1/2}(\ce{^{210}Po}) \approx 10^{10.5} \cdot t_{1/2}(\ce{^{214}Po}) \approx 10^{10} \cdot 10^{1/2} \cdot \SI{1.6e6}{s} = \SI{58.6}{giorni}.
+  \]
+
+  Il valore sperimentale per il tempo di dimezzamento del
+  \ce{^{210}Po} \`e circa 140 giorni, che \`e dello stesso
+  ordine di grandezza del valore stimato con la legge di
+  Geiger-Nuttal.
+\end{Answer}
+
+\begin{Exercise}[title={Decadimenti in sequenza}]
+ Si consideri la seguente sequenza di decadimento:
+\begin{itemize}
+\item $N_1 \to N_2$, con costante di decadimento $\omega_1 = 10~s^{-1}$;
+\item $N_2 \to N_3$, con costante di decadimento $\omega_2 = 50~s^{-1}$;
+\item $N_3$ \`e stabile.
+\end{itemize}
+
+\Question Assumendo che al tempo zero i nuclei di tipo $N_1$ siano in numero $N_0$ e quelli di tipo $N_2$ e $N_3$
+siano assenti, calcolare il numero di nuclei dei tre tipi per qualsiasi tempo. In particolare, si chiede il 
+rapporto  $N_3 / N_1$ dopo 1/4 di secondo.
+\end{Exercise}
+\begin{Answer}
+Nel caso di 3 decadimenti in sequenza si ha:
+\beqn
+\dv{N_1}{t} &=& - \omega_1 N_1 \\
+\dv{N_2}{t} &=& \omega_1 N_1 - \omega_2 N_2 \\
+\dv{N_3}{t} &=& \omega_2 N_2 - \omega_3 N_3~.
+\eeqn
+Le soluzioni particolari del sistema per le condizioni iniziali $N_1(0) = N_0$, $N_k(0) = 0$ e $dN_k/dt(0) = 0$ per k=2,3 sono:
+\beqn
+N_1(t) &=& N_0 e^{ - \omega_1 t} \\
+N_2(t) &=& N_0 \frac{\omega_1}{\omega_2 - \omega_1} (e^{ - \omega_1 t} - e^{ - \omega_2 t}) \\
+N_3(t) &=& N_0 \omega_1 \omega_2 \left[ \frac{e^{ - \omega_1 t}}{(\omega_2 - \omega_1)(\omega_3 - \omega_1)}
++ \frac{e^{ - \omega_2 t}}{(\omega_3 - \omega_2)(\omega_1 - \omega_2)}
++ \frac{e^{ - \omega_3 t}}{(\omega_1 - \omega_3)(\omega_2 - \omega_3)} \right ] ~.
+\eeqn
+Nel caso in esame abbiamo $\omega_3 = 0$ e quindi:
+\[
+N_3(t) = N_0 \left[ 1 + \frac{e^{ - \omega_1 t}}{\omega_1/\omega_2 - 1} + 
+  \frac{e^{ - \omega_2 t}}{\omega_2/\omega_1 - 1} \right]~.
+\]
+In particolare dopo 1/4 di secondo abbiamo:
+\[
+\frac{N_3}{N_1} = \frac{\left[ 1 + \frac{e^{ - \omega_1 t}}{\omega_1/\omega_2 - 1} + 
+    \frac{e^{ - \omega_2 t}}{\omega_2/\omega_1 - 1} \right]}{e^{ - \omega_1 t}} \approx 10.9~.
+\]
+\end{Answer}
