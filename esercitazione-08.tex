@@ -1,0 +1,94 @@
+\begin{Exercise}
+  Sebbene l'interazione debole sia universale, diversi processi
+  regolati da essa possono avvenire con probabilit\`a largamente
+  diverse, a causa di motivi cinematici. Ad esempio, nei decadimenti:
+  $\pi^- \to \mu^-\bar \nu$ e $\pi^- \to e^-\bar \nu$, per la natura
+  ``V--A'' (Vettoriale--Assiale) delle interazioni deboli, l'elemento
+  di matrice della transizione, $M^2$ \`e proporzionale a $1-\beta^2$,
+  dove $\beta$ \`e la velocit\`a del leptone carico.
+
+  \Question Assumendo tale relazione per l'elemento di matrica,
+  stimare il rapporto tra i tassi di decadimento dei due canali:
+  \[
+  r = \frac{\Gamma(\pi^- \to \mu^-\bar \nu)}{\Gamma(\pi^- \to e^-\bar \nu)}
+  \]
+
+  [Dati: $m_\mu = \SI{105}{MeV/c^2}$, $m_e = \SI{0.511}{MeV/c^2}$, $m_\pi = \SI{140}{MeV/c^2}$]
+\end{Exercise}
+\begin{Answer}
+  Per le interazioni deboli la rate di decadimento \`e data da:
+  \[
+  \Gamma = 2\pi G_F^2\vert M \vert^2\dv{N}{E_0}
+  \]
+  dove $\dv{N}{E_0}$ \`e il numero di stati finali per unit\`a di
+  intervallo di energia, $M$ \`e l'elemento di matrice della
+  transizione (cio\`e l'ampiezza per il decadimento considerato, dallo
+  stato iniziale a quello finale, e $G_F$ \`e la costante di Fermi
+  dell'interazione debole.
+
+  Lo spazio delle fasi \`e:
+  \[
+  \dv{N}{E_0} = C p^2 \dv{p}{E_0}
+  \]
+  dove $C$ \`e una costante, $p$ il momento del leptone carico
+  ($\ell=e,\mu$) nel sistema di riferimento del pione (nella notazione
+  usuale, sarebbe $p^*$, ma scriviamo $p$ per semplificare la
+  notazione in seguito).  L'energia totale del sistema \`e, usando la
+  conservazione dell'energia nel sistema di riferimento del centro di
+  massa:
+  \[
+  E_0 = m_\pi = \sqrt{p_e^2 +m_\ell^2} + \sqrt{p_\nu^2+m^2_\nu}
+  \]
+  usando la conservazione dell'impulso, e chiamando $p \equiv
+  p_\nu=p_e$, e assumendo zero la massa del neutrino $m_\nu=0$,
+  \[
+  E_0 = m_\pi = p + \sqrt{p^2+m^2_e}
+  \]
+  e quindi si ricava:
+  \[
+  p = \frac{E_0^2-m_\ell^2}{2E_0}
+  \]
+  nel decadimento a due corpi $E_0=m_\pi$, e quindi:
+  \[
+  p = \frac{m_\pi^2-m_\ell^2}{2m_\pi}
+  \]
+  dalla relazione in funzione di $E_0$ si pu\`o ricavare uno dei fattori dello spazio delle fasi derivando $p(E_0)$:
+  \[
+  \dv{p}{E_0} = \frac{E_0}{2} - \frac{m_\ell^2}{2E_0} = \frac{E_0^2-m_\ell^2}{2E_0^2}
+  \]
+  e di nuovo, considerando che $E_0=m_\pi$:
+  \[
+  \dv{p}{E_0} = \frac{m_\pi^2+m_\ell^2}{2m_\pi^2}
+  \]
+
+  Ci rimane di calcolare l'elemento di matrice, che abbiamo detto essere, in questo caso, $M^2 \approx 1-\beta$.
+  Calcoliamo la velocit\`a dell'elettrone:
+  \[
+  \beta = \frac{p}{\sqrt{p^2+m_\ell^2}} = \frac{p}{m_\pi-p}
+  \]
+  dove abbiamo usato ancora la conservazione dell'energia precedente. Per semplificare i passaggi algebrici, calcoliamo $1/\beta$:
+  \[
+  \frac{1}{\beta} = \frac{m_\pi}{p}-1 = \frac{2m_\pi^2}{m_\pi^2-m_\ell^2} - 1 = \frac{m_\pi^2+m_\ell^2}{m_\pi^2-m_\ell^2}
+  \]
+  da cui si ricava quello che ci serve:
+  \[
+  1-\beta = 1-\frac{m_\pi^2-m_\ell^2}{m_\pi^2+m_\ell^2}  = \frac{2m_\ell^2}{m_\pi^2+m_\ell^2}.
+  \]
+  Quindi possiamo finalmente calcolare il tasso di decadimento come proporzionale a:
+  \[
+  \Gamma \propto (1-\beta)p^2\dv{p}{E_0} = \left(\frac{2m_\ell^2}{m_\pi^2+m_\ell^2}\right) \left( \frac{m_\pi^2-m_\ell^2}{2m_\pi} \right)^2 \left( \frac{m_\pi^2+m_\ell^2}{2m_\pi^2} \right)
+  \]
+  e quindi:
+  \[
+  \Gamma \propto \frac{1}{4}\left(\frac{m_\ell}{m_\pi}\right)^2  \left( \frac{m_\pi^2-m_\ell^2}{m_\pi} \right)^2.
+  \]
+  Quindi il rapporto tra i tassi di decadimento \`e:
+  \[
+  r = \frac{\Gamma(\pi^- \to \mu^-\bar \nu)}{\Gamma(\pi^- \to e^-\bar \nu)} = \frac{m_\mu^2(m_\pi^2-m_\mu^2)^2}{m_e^2(m_\pi^2-m_e^2)^2} = \SI{8.13e3}{}
+  \]
+  Quindi, nonostante lo spazio delle fasi pi\`u grande nel decadimento
+  del pione in elettrone, rispetto a quello del muone, il primo \`e
+  largamente soppresso dal fattore $(m_\mu/m_e)^2 \approx (200)^2 =
+  40000$ dovuto alla natura particolare dell'interazione debole
+  (V--A).
+\end{Answer}
