@@ -1,4 +1,4 @@
-\begin{Exercise}
+\begin{Exercise}[title={Soppressione cinematica nel decadimento $\beta$}]
   Sebbene l'interazione debole sia universale, diversi processi
   regolati da essa possono avvenire con probabilit\`a largamente
   diverse, a causa di motivi cinematici. Ad esempio, nei decadimenti:
@@ -88,7 +88,336 @@
   \]
   Quindi, nonostante lo spazio delle fasi pi\`u grande nel decadimento
   del pione in elettrone, rispetto a quello del muone, il primo \`e
-  largamente soppresso dal fattore $(m_\mu/m_e)^2 \approx (200)^2 =
-  40000$ dovuto alla natura particolare dell'interazione debole
+  largamente soppresso dal fattore $(m_\mu/m_e)^2 \approx (200)^2 = 40000$
+  dovuto alla natura particolare dell'interazione debole
   (V--A).
+\end{Answer}
+
+\begin{Exercise}[title={Legge di Sargent}]
+ Nel decadimento del $D^0$ (mesone costituito dalla coppia di
+ quark-antiquark $c\bar{u}$, $M_{D^0}=\SI{1865}{MeV/c^2}$), si ha il
+ seguente rapporto dei \textit{branching ratio} ($BR$) tra due modi di
+ decadimento:
+ \[
+ \frac{BR(D^0 \to K^- + e^+ + \nu_e)}{BR(D^0 \to \pi^- + e^+ + \nu_e)} = 9.8 \pm 1.7
+ \]
+ Giustificare questo risultato sperimentale, sapendo che per questi
+ stati adronici la costante di accoppiamento dell'interazione debole
+ \`e modificata, e invece di $g$ vale $g\sin\theta_C$ per il
+ decadimento $D^0\to\pi^- + e^+ + \nu_e$ e $g\cos\theta_C$ per il
+ decadimento $D^0 \to K^- + e^+ + \nu_e$, dove $\theta_C$ \`e l'angolo
+ di Cabibbo ($\sin\theta_C \approx 0.22$).
+\end{Exercise}
+
+\begin{Answer}
+  Poich\'e i \textit{Branching Ratio} sono
+  proporzionali alla frequenza di transizione, dalla regola d'oro di Fermi segue
+  che:
+  \[
+  \frac{BR(D^0 \to K^- + e^+ + \nu_e)}{BR(D^0 \to \pi^- + e^+ + \nu_e)} =
+  \frac{|{\cal M}(D^0 \to K^- + e^+ + \nu_e)|^2}{|{\cal M}(D^0 \to \pi^- + e^+ + \nu_e)|^2} \times
+  \frac{\rho(D^0 \to K^- + e^+ + \nu_e)}{\rho(D^0 \to \pi^- + e^+ + \nu_e)}
+  \]
+  Per quanto riguarda il primo rapporto basta usare, come ricordato dal
+  testo, che la costante d'accoppiamento effettiva \`e $g \cos \theta_C$
+  per $D^0 \to K^-$ \footnote{Questo \`e dovuto al fatto che la
+  transizione elementare \`e quella di $c \to s + W^+$} mentre \`e $g
+  \sin \theta_C$ per $D^0 \to \pi^-$\footnote{In modo simile a prima,
+  questo avviene perch\'e la transizione elementare \`e $c \to d +
+  W^+$}, con $\sin \theta_C \simeq 0.22$.
+  
+  I termini di spazio delle fasi ($\rho$) possono invece essere stimati 
+  considerando l'analogia, dal punto di vista cinematico, tra i decadimenti
+  proposti e il decadimento $\beta$. Per il decadimento $\beta$ vale la {\it Regola di
+    Sargent}:
+  \[
+  W \propto E_0^5,
+  \]
+  dove $W$ \`e la \textit{rate} di decadimento, mentre
+  $E_0$ \`e l'energia a disposizione ($= m_n - m_p - m_e$, nel caso del 
+  decadimento $\beta$ fondamentale $n \to p + e^- + \bar{\nu_e}$).  Poich\'e tale
+  regola \`e stata ricavata nell'ambito della Teoria di Fermi del decadimento
+  beta, in cui la parte dinamica \`e costante ($G_F$), segue che: 
+  $\rho \propto E_0^5$.
+
+  Quindi:
+  \[\frac{BR(D^0 \to K^- + e^+ + \nu_e)}{BR(D^0 \to \pi^- + e^+ + \nu_e)} =
+  \frac{cos^2 \theta_C}{sin ^2 \theta_C} \times 
+  \left ( \frac {m_D - m_K - m_e}{m_D - m_\pi - m_e} \right )^5 \approx
+  20 \times 0.32 \approx 6.4
+  \]
+  che, nonostante la rozzezza della stima, differisce dal valore sperimentale per solo il 35\%.
+\end{Answer}
+
+
+\begin{Exercise}[title={Attivit\`a di un decadimento $\beta$}]
+Ogni organismo vivente contiene circa $1.3 \times 10^{-10} \%$ 
+di \ce{^{14}_{6}C} su tutto il Carbonio in esso presente. 
+Tale isotopo decade $\beta^-$ con un tempo di 
+dimezzamento di 5730 anni.
+
+Misurando l'attivit\`a (= intensit\`a della radiazione emessa) di un
+fossile di massa \SI{5}{g}, si registrano 3600 decadimenti in 2 ore.
+Calcolare l'et\`a del fossile.
+\end{Exercise}
+
+\begin{Answer}
+  Il decadimento in oggetto \`e:
+  \[
+  \ce{^{14}_{6}C} \rightarrow \ce{^{14}_{7}N} + e^- + \bar{\nu}_e
+  \]
+  Sappiamo che:
+  \[
+  \mathcal{A} = \dv{N}{t} = \frac{N(\ce{^{14}C})}{\tau(\ce{^{14}C})} \quad .
+  \]
+  Il numero di nuclei radioattivi contenuti nel fossile all'origine (quando 
+  era un organismo vivente) \`e:
+  \beqn
+  N_0(\ce{^{14}C}) &=& f \times N_0(C) = f \times  m \times \frac{N_A}{\langle A(C) \rangle} \\
+  &\approx& 1.3 \cdot 10^{-12} \times 5 \times \frac{6 \cdot 10^{23} }{12.001} \approx 3.2 \cdot 10^{11} \quad,
+  \eeqn
+  dove $f$ \`e la frazione di \ce{^{14}_{6}C}, $m$ la massa del fossile in grammi,
+  $N_A$ il numero di Avogadro e  $\langle A(C) \rangle$ la massa atomica del 
+  Carbonio naturale (si poteva usare 12 altrettanto bene).
+
+  La vita media del \ce{^{14}_{6}C} \`e:
+  \[
+  \tau(\ce{^{14}C}) = \frac{T_{1/2}(\ce{^{14}C})}{\ln(2)} \approx 8270~\textrm{anni}.
+  \]
+  Quindi:
+  \[
+  \mathcal{A}_0 = \frac{N_0(\ce{^{14}C})}{\tau(\ce{^{14}C})}\approx
+  \frac{3.2 \cdot 10^{11}}{8270 \times 3.15 \cdot \SI{10e7}{s}} \approx \SI{1.23}{s^{-1}}
+  \]
+  L'attivit\`a attuale \`e:
+  \[
+  \mathcal{A}(t) = \mathcal{A}_0 \cdot e^{-t/\tau(\ce{^{14}C})} =
+  \frac{3600}{2 \times \SI{3600}{s}} \approx \SI{0.5}{s^{-1}} = \approx \SI{0.5}{Hz}
+  \]
+  e quindi l'et\`a del fossile sar\`a:
+  \[
+  T = - \tau(\ce{^{14}C}) \times \ln \frac{\mathcal{A}(t)}{\mathcal{A}_0}
+  \approx - 8270~\textrm{anni} \times \ln \frac{0.5}{1.23} \approx 7400~\textrm{anni} \quad.
+  \]
+\end{Answer}
+
+
+\begin{Exercise}[title={Energia cinetica nel decadimento $\beta$}] 
+Utilizzando la {\it formula semiempirica di massa}, verificare se il
+nucleo \ce{^{64}_{29}Cu} pu\`o decadere $\beta^-$ (in
+\ce{^{64}_{30}Zn}) e/o $\beta^+$ (in \ce{^{64}_{28}Ni}). Si calcoli
+il massimo dell'energia cinetica per i decadimenti possibili.
+
+Si usino i seguenti dati: $M_{p}=\SI{938.28}{MeV/c^2}$, $M_{n}=\SI{939.57}{MeV/c^2}$, $m_{e}=\SI{0.511}{MeV/c^2}$.)
+\end{Exercise}
+
+\begin{Answer}
+  Indicando con $Q_-$ il Q-valore del decadimento $\beta_-$:
+  \[
+  \ce{^{64}_{29}Cu} \rightarrow \ce{^{64}_{30}Zn} + e^- + \bar{\nu}_e
+  \]
+  e con $Q_+$ quello del decadimento  $\beta_+$:
+  \[
+  \ce{^{64}_{29}Cu} \rightarrow \ce{^{64}_{28}Ni} + e^+ + \nu_e
+  \]
+  si ha (omettendo i $c^2$ a moltiplicare le masse):
+  \beqn
+  Q_- &=& 29 M_p + 35 M_n - B(64,29) - 30 M_p - 34 M_n + B(64,30) - m_e \\
+  &=& M_n - M_p - m_e + B(64,30) - B(64,29) \\
+  &\approx& \SI{0.779}{MeV} + B(64,30) - B(64,29)
+  \eeqn
+  Analogamente:
+  \beqn
+  Q_+ &=& M_p - M_n - m_e + B(64,28) - B(64,29) \\
+  &\approx& \SI{-1.801}{MeV} + B(64,28) - B(64,29)
+  \eeqn
+  Dalla \textit{formula semiempirica di massa} si ottengono le variazioni di energia di legame:
+  \beqn
+  B(64,30) - B(64,29) &=& -0.697 \times \frac{30^2 - 29^2}{64^{1/3}} - 23.3 \times
+  \frac{(64 - 60)^2 - (64 - 58)^2}{64} + \frac{12 + 12}{\sqrt{64}} \\
+  &\approx& \SI{0.0005}{MeV} 
+  \eeqn
+  e analogamente:
+  \beqn
+  B(64,28) - B(64,29) &=& -0.697 \times \frac{28^2 - 29^2}{64^{1/3}} - 23.3 \times
+  \frac{(64 - 56)^2 - (64 - 58)^2}{64} + \frac{12 + 12}{\sqrt{64}} \\
+  &\approx& \SI{2.74}{MeV}
+  \eeqn
+  Quindi si ha:
+  \[
+  Q_- \approx{0.78}{MeV} \qquad Q_+ \approx {0.94}{MeV}\quad.
+  \]
+  Entrambi i decadimenti sono possibili. Le energie cinetiche massime di elettrone e positrone
+  sono rispettivamente uguali a $Q_-$ e $Q_+$.
+\end{Answer}
+
+
+
+
+
+
+
+
+
+\begin{Exercise}[title={Energia massima dei positroni nel decadimento $\beta^+$}]
+L'energia massima misurata dei positroni emessi nel decadimento
+$\beta^+$ dell'isotopo $^{35}_{18}Ar$ \`e \SI{4.95}{MeV}. Usare questa
+informazione per determinare il valore del termine Coulombiano $a_C$
+nella \textit{formula semiempirica di massa} di
+Weizsacker. Confrontare il valore con quello trovato sperimentalmente, che \`e pari a $a_C=\SI{0.697}{MeV}$.
+
+Si utilizzino i dati: $M_p-M_n=\SI{-1.293}{MeV/c^2}$,
+$m_e=\SI{0.511}{MeV/c^2}$.
+
+\noindent \textit{N.B. - } Non si deve utilizzare il valore di nessuna costante della formula di massa.  
+\end{Exercise}
+
+\begin{Answer}
+  Per un decadimento $\beta^+$,  $(A,Z) ~\rightarrow ~(A,Z - 1)~ +~  e^{+}~+~\nu_e$ ,
+  il Q-valore del decadimento, espresso in masse nucleari \`e:
+  \[
+  Q_{\beta} = [ M(A,Z) - M(A,Z-1) - m ] c^2~,
+  \]
+  dove:
+  \beqn
+  M(A,Z) &=& Z M_p + (A - Z) M_n - B(A,Z) / c^2 \\
+  M(A,Z-1) &=& (Z - 1) M_p + (A - Z + 1) M_n - B(A,Z - 1) / c^2~.
+  \eeqn
+  Quindi:
+  \begin{equation}
+    Q_{\beta} = [M_p - M_n - m ] c^2  - \Delta B~,
+    \label{Qbeta}
+  \end{equation}
+  essendo
+  \[
+  \Delta B = B(A,Z) - B(A,Z - 1)\quad.
+  \]
+  Si pu\`o calcolare $\Delta B$ utilizzando la {\it formula semiempirica di massa} ed osservando 
+  che gli unici termini che non si elidono tra le due energie di legame sono quello Coulombiano
+  e quello di asimmetria, poich\'e:
+  \begin{enumerate}
+  \item i termini di volume e di superficie dipendono solo da $A$, che rimane invariato,
+  \item $A$ \`e dispari e quindi il termine di {\it accoppiamento} \`e nullo in entrambi i nuclei.
+  \end{enumerate}
+  Si ha allora:
+  \[
+  \Delta B = - a_C \left\{\frac{Z^2}{A^{1/3}} - \frac{(Z - 1)^2}{A^{1/3}}\right\}- a_A \left\{\frac{(A - 2 Z)^2}{A} - 
+  \frac{[A - 2 (Z - 1)]^2}{A}\right\}
+  \]
+  \begin{equation}
+    = - a_C \frac{2 Z - 1}{A^{1/3}} - 4 a_A \frac{A - 2 Z + 1}{A}
+    \label{DB}
+  \end{equation}
+  Nella reazione considerata abbiamo $A = 35$ e $Z = 18$ e pertanto il termine che moltiplica $a_A$ risulta identicamente nullo.
+  Invertendo la (\ref{DB}) si ha quindi:
+  \[
+  a_C = - \frac{A^{1/3} \Delta B}{2 Z - 1}\quad.
+  \]
+  Dalla (\ref{Qbeta}) si ottiene:
+  \beqn
+  \Delta B &=& [M_p - M_n - m ] c^2 - Q_{\beta} \\
+  &=& -1.293 -0.511 - 4.95 \simeq -6.75~MeV
+  \eeqn
+  e quindi:
+  \[
+  a_C = - \frac{35^{1/3} \times  -6.75}{35} \simeq 0.63~MeV~.
+  \]
+  Il valore cos\'i ottenuto differisce da quello sperimentale di \SI{0.697}{MeV} per meno del 10\%.
+\end{Answer}
+
+
+\begin{Exercise}[title={Costante di Fermi e legge di Sargent}]
+La vita media del neutrone libero \`e \SI{886}{s}. Si chiede:
+
+\Question calcolare la costante di Fermi nel limite della {\it regola
+  di Sargent}.
+\Question calcolare la vita media del decadimento $\beta^-$
+dell'isotopo \ce{^{35}_{16}S}, sapendo che il suo Q-valore risulta
+\SI{168}{KeV}.  Si assuma che sia l'elemento di matrice nucleare che
+il termine coulombiano siano trascurabili (cio\`e = 1).
+\end{Exercise}
+
+\begin{Answer}
+  \begin{enumerate}
+
+  \item L'espressione della rate di decadimento beta nel limite della regola di Sargent (cio\`e 
+    integrando nell'assunzione $E \gg m c^2$ e sostituendo $E_0$ con $T_{max}$) \`e:
+    \[
+    \lambda = \frac{G^2_F}{2 \pi^3 \hbar^7 c^6} \frac{T^5_{max}}{30}~.
+    \]
+    Quindi per la costante di Fermi (divisa per $(\hbar c)^3$, come viene solitamente espressa) si ha:
+    \beqn
+    \left [\frac{G_F}{(\hbar c)^3} \right]^2 &=& \frac{\lambda~2 \pi^3~ (\hbar c) ~30}{c ~T^5_{max}}
+    = \frac{1/886~s^{-1}\times 62 \times \SI{197}{MeV\cdot fm} \times 30}{3\cdot \SI{10e23}{fm~s^{-1}} \times (\SI{0.782}{MeV})^5} \\
+    &\approx& \SI{4.7e-21}{MeV^{-4}},
+    \eeqn
+    da cui si ottiene:
+    \[
+    \frac{G_F}{(\hbar c)^3} \simeq \SI{6.9e-11}{MeV^{-2}} ~=~ \SI{6.9e-5}{GeV^{-2}}~.
+    \]
+    Il valore risulta diverso da quello che si trova in letteratura (\SI{1.17e-5}{GeV^{-2}}), 
+    per l'integrazione inesatta dello spettro e per motivi non trattati nel corso (carattere V--A
+    dell'interazione debole e struttura a quark).
+
+  \item Nel caso del decadimento $\ce{^{35}_{16}S} \to
+    \ce{^{35}_{17}Cl} + e^{-} + \bar{\nu}_e$, si ottiene, utilizzando
+    la regola di Sargent:
+    \[
+    \frac{\lambda[\ce{^{35}S}]}{\lambda[n]} = \left( \frac{Q[\ce{^{35}S}]}{Q[n]} \right)^5
+    = \left( \frac{0.168}{0.782} \right)^5 \simeq 0.00046
+    \]
+    e quindi:
+    \[
+    \tau[\ce{^{35}S}] = \frac{\SI{886}{s}}{0.00046} \approx \SI{1.9e6}{s} \approx 22~\textrm{giorni}
+    \]
+  \end{enumerate}
+\end{Answer}
+
+
+
+
+\begin{Exercise}[title={Attivit\`a e massa di una seorgente radioattiva}]
+L'attivit\`a naturale di \SI{1}{g} di \ce{^{226}Ra} \`e usata per definire l'unit\`a di misura di 
+\SI{1}{Curie} (\SI{}{Ci}). Il tempo di dimezzamento del  \ce{^{226}Ra} \`e di \SI{1620}{anni}.
+
+\Question Che massa ha un campione di \ce{^{60}Co} ($t_{1/2} =\SI{5.26}{anni}$) se l'attivit\`a misurata risulta \SI{10}{Ci} ?
+\end{Exercise}
+
+\begin{Answer}
+  La costante di decadimento del \ce{^{226}Ra} \`e :
+  \[
+  \lambda = \frac{\ln 2}{t_{1/2}} = \frac{0.693}{1.62 \times 10^3 \times \SI{3.1e7}{s}}
+  \approx \SI{1.4e-11}{s^{-1}}
+  \]
+  L'attivit\`a di \SI{1}{g} di  \ce{^{226}Ra} \`e :
+  \beqn
+  \mathcal{A} &=& \vert \dv{N}{t} \vert = \lambda N_0 = \lambda \frac{N_A}{A} \times 1 \\
+  &=& \SI{1.4e-11}{s^{-1}} \times \frac{6.02 \times 10^{23}}{226} \\
+  &\approx& \SI{3.7e10}{s^{-1}}
+  \eeqn
+  Questa \`e  la definizione di \SI{1}{Curie} (\SI{}{Ci}).
+
+  Il nostro campione di \ce{^{60}Co} presenta un'attivit\`a di \ce{10}{Ci}, cio\`e \SI{3.7e11}{s^{-1}}.
+  Indicando con $m$ la sua massa in grammi, risulta:
+  \begin{equation}
+    m = \mathcal{A} \frac{A}{N_A} \frac{t_{1/2}}{\ln 2}
+    \label{eq:mass_activity}
+  \end{equation}
+  da cui:
+  \[
+  m = \SI{3.7e11}{s^{-1}}
+  \times \frac{\SI{60}{g}}{6.02 \times 10^{23}} \times \frac{5.26 \times \SI{3.11e7}{s}}{0.693} \approx \SI{8.7}{mg}.
+  \]
+
+  In modo pi\`u semplice si poteva raggiungere il risultato attraverso
+  l'espressione delle masse relative di campioni di uguale attivit\`a:
+  \[
+  \frac{m_1}{m_2} = \frac{A_1}{A_2} \times \frac{t_{1/2}^{(1)}}{t_{1/2}^{(2)}}
+  \]
+  Questa si ricava  direttamente dalla \ref{eq:mass_activity} uguagliando le attivit\`a. Nel nostro caso:
+  \[
+  m_{Co} = m_{Ra} \times  \frac{A_{Co}}{A_{Ra}} \times \frac{t_{1/2}^{(Co)}}{t_{1/2}^{(Cu)}} 
+  = 10 \times \frac{60}{226} \times \frac{5.26}{1620}\approx \SI{8.7}{mg}
+  \]
+
 \end{Answer}
