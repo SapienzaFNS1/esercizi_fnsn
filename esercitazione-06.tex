@@ -148,11 +148,11 @@
 
   \item Lo scattering Coulombiamo produce una variazione nell’angolo data dalla formula:
     \[
-    \langle \bar \theta_{MS} \rangle = \SI{13.6}{MeV} \frac{z}{pc\beta}\sqrt{\frac{x}{X_0}}
+    \langle \bar \theta_{MS} \rangle = \SI{21}{MeV} \frac{z}{pc\beta}\sqrt{\frac{x}{X_0}}
     \]
     usando i valori numerici $z=1$, $\beta\approx 1$, $p=\SI{50000}{MeV/c}$ si ottiene
     \[
-    \langle \bar \theta_{MS} \rangle = \SI{9.5e-5}{rad} = 0.005^\circ
+    \langle \bar \theta_{MS} \rangle = \SI{9.4e-5}{rad} = 0.005^\circ
     \]
    \end{enumerate}
 \end{Answer}
@@ -174,13 +174,14 @@
 \begin{Answer}
   L'energia di soglia del pione \`e la minima necessaria per produrre
   le particelle finali a riposo nel sistema di riferimento del centro
-  di massa ($E_\textrm{min}$). Uguagliando la massa invariante dello
-  stato iniziale e finale nel centro di massa: \beqn
-  \sqrt{s}_\textrm{in} = \sqrt{E_\textrm{min} + m_p} \\
-  \sqrt{s}_\textrm{fin} = \sqrt{m_K + m_\Lambda} \eeqn elevando al
-  quadrato ed uguagliando le masse invarianti si ottiene:
+  di massa ($E_\textrm{min}$). Uguagliando il modulo quadro del quadrimpulso, che \`e un invariante di Lorentz, e quindi uguale  nello
+  stato iniziale e finale: \beqn
+  \vert p_\textrm{in} \vert^2 = \vert (E_\textrm{min} + m_p, \vec p_\textrm{min}) \vert^2 \\
+  \vert p_\textrm{fin} \vert^2 = \vert (m_K + m_\Lambda, \vec 0) \vert^2 \eeqn
+  elevando al quadrato ed uguagliando:
   \beqn
-  E^2_\textrm{min} + m_p^2 + 2E_\textrm{min}m_p =  (m_K + m_\Lambda)^2 \\
+  E^2_\textrm{min} + m_p^2 + 2E_\textrm{min}m_p - p_\textrm{min}^2 =  (m_K + m_\Lambda)^2 \\
+  m_\pi^2 + m_p^2 +  2E_\textrm{min}m_p = (m_K + m_\Lambda)^2 \\
   \Rightarrow E_\textrm{min} = \frac{(m_K + m_\Lambda)^2 - m_\pi^2 - m_p^2}{2m_p} \approx \SI{0.91}{GeV}
   \eeqn
 
