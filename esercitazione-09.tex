@@ -1,4 +1,73 @@
-\begin{Exercise}[title={}]
+\begin{Exercise}[title={Isospin}]
+  Sapendo che il mesone $f_2$ \`e uno stato di spin $S=2$ e isospin
+  $\ket{I,I_3}=\ket{0,0}$, calcolare il rapporto tra le sezioni
+  d'urto:
+  \[
+  R = \frac{\sigma(f_2\to\pi^+\pi^-)}{\sigma(f_2\to\pi^0\pi^0)}
+  \]
+  assumendo che nel decadimento forte la simmetria di isospin sia
+  perfettamente conservata.
 \end{Exercise}
 \begin{Answer}
+  Possiamo esprimere la parte di isospin della funzione d'onda della $f_2$ come somma degli
+  autostati di isospin dei pioni:
+  \beqn
+  \ket{\pi^+} = \ket{1,1} \\
+  \ket{\pi^0} = \ket{1,0} \\
+  \ket{\pi^-} = \ket{1,-1}
+  \eeqn
+  utilizzando i coefficienti di Clebsh-Gordan si ottiene:
+  \[
+  \ket{0,0} = \sqrt{\frac{1}{3}}\ket{1,1}\ket{1,-1} - \sqrt{\frac{1}{3}}\ket{1,0}\ket{1,0}
+  + \sqrt{\frac{1}{3}}\ket{1,-1}\ket{1,1}
+  \]
+  Quindi sono possibili i due decadimenti in $\ket{\pi^+,\pi^-}$ e $\ket{\pi^-,\pi^+}$.
+  Chiamando $A(\pi^+,\pi^-)$ e $A(\pi^-,\pi^+)$ le due rispettive ampiezze (elementi di matrice),
+  l'ampiezza di transizione totale, comprendendo la probabilit\`a di transizione di isospin \`e:
+  \beqn
+  \bra{\pi^+,\pi^-}\ket{f_2} \propto \sqrt{\frac{1}{3}}A(\pi^+,\pi^-) \\
+  \bra{\pi^-,\pi^+}\ket{f_2} \propto \sqrt{\frac{1}{3}}A(\pi^-,\pi^+)  
+  \eeqn
+
+  Il mesone $f_2$ ha spin $S=2$ (e quindi momento angolare totale
+  $J=2$), quindi le due ampiezze $A(\pi^+,\pi^-)$ e $A(\pi^-,\pi^+)$
+  sono legate tra loro dalla simmetria di parit\`a:
+  \[
+  A(\pi^+,\pi^-) = (-1)^2 A(\pi^+,\pi^-) = A(\pi^+,\pi^-)
+  \]
+  e quindi:
+  \[
+  \sigma(f_2 \to \pi^+\pi^-) \propto \left| 2 \cdot \sqrt{\frac{1}{3}}A(\pi^+,\pi^-) \right|^2
+  \]
+
+  La parte di isospin dell'ampiezza di transizione in due pioni neutri \`e data da:
+  \[
+  \bra{\pi^0,\pi^0}\ket{f_2} \propto \sqrt{\frac{1}{3}}A(\pi^0,\pi^0)
+  \]
+
+  Poich\'e lo stato finale \`e costituito da due bosoni ($S=0$) identici, la funzione d'onda va
+  simmetrizzata correttamente, tenendo conto del teorema di spin-orbita.
+  Ad esempio, per due particelle:
+  \begin{equation}
+    \label{eqn:bose2part}
+    A(1,2) \rightarrow \frac{A(1,2)+A(2,1)}{\sqrt{2}}
+  \end{equation}
+  o, in generale, tenendo conto che le ampiezze $A$ non dipendono dall'ordine delle particelle, e
+  quindi sono tutte uguali tra loro, si ha, per $n$ particelle identiche:
+  \begin{equation}
+    \label{eqn:boseNpart}
+    A(1,2,\dots,n) \rightarrow \frac{n!A(1,2,\dots,n)}{\sqrt{n!}}    
+  \end{equation}
+
+  Quindi, nel caso dei due pioni neutri, usando la Eq.~\ref{eqn:boseNpart}:
+  \[
+  A(\pi^0,\pi^0) \rightarrow \frac{2 \cdot A(\pi^0,\pi^0)}{\sqrt{2}}
+  \]
+  Assumendo la simmetria di isospin esatta, l'elemento di matrice del decadimento ($A$) in pioni
+  di qualsiasi carica \`e lo stesso, e lo \`e anche lo spazio delle fasi. Quindi il rapporto delle sezioni d'urto vale:
+  \beqn
+  R &=& \frac{\sigma(f_2\to\pi^+\pi^-)}{\sigma(f_2\to\pi^0\pi^0)} =
+  \frac{\left|\bra{\pi^+\pi^+}\ket{f_2}\right|^2}{\left|\bra{\pi^0\pi^0}\ket{f_2}\right|^2} \\
+  &=&\frac{\left| 2\cdot \sqrt{\frac{1}{3}}\right|^2}{\left| \sqrt{2}\cdot \sqrt{\frac{1}{3}}\right|^2} = 2
+  \eeqn
 \end{Answer}
