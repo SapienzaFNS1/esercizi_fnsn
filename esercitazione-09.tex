@@ -71,3 +71,287 @@
   &=&\frac{\left| 2\cdot \sqrt{\frac{1}{3}}\right|^2}{\left| \sqrt{2}\cdot \sqrt{\frac{1}{3}}\right|^2} = 2
   \eeqn
 \end{Answer}
+
+\begin{Exercise}[title={Raggio di nuclei simmetrici}]
+  I nulcei di \ce{^{27}_{14}Si} e \ce{^{27}_{13}Al} sono simmetrici,
+  cio\`e i loro stati fondamentali sono identici, eccetto per la loro
+  carica elettrica.
+
+  \Question Conoscendo la loro differenza di massa ($\Delta
+  M=\SI{6}{MeV}$), stimare il loro raggio.  Per semplicit\`a, si
+  trascuri la differenza di massa tra protone e neutrone.
+
+\end{Exercise}
+\begin{Answer}
+  Usando la stima dell'energia elettrostatica accumulata in una sfera uniformemente carica di raggio $R$,
+  approssimazione che solitamente usiamo per la distribuzione di una carica $Q$ all'interno di un nucleo:
+  \[
+  U = \frac{3}{5}\cdot\frac{Q^2}{R}
+  \]
+  le ipotesi del problema (trascurare la differenza di massa
+  potone-neutrone) ci dicono che possiamo attribuire la differenza di
+  massa tra i due nuclei alla sola differenza di carica elettrostatica.
+  Quindi:
+  \[
+  \Delta U = \frac{3e^2}{5R}(Z^2_1 - Z^2_2)
+  \]
+  Usando i dati numerici per i nuclei in gioco:
+  \beqn
+  R &=& \frac{3e^2}{5\Delta U}\times\left(Z_1^2-Z_2^2\right) = \frac{3\hbar c}{5\Delta U}\times\left( \frac{e^2}{\hbar c} \right)\times \left( 14^2 - 13^2 \right) \\
+  &=& \frac{3\times \SI{197}{MeV\cdot fm}}{5\times\SI{6}{MeV}} \times \frac{1}{137}\times \left( 14^2 - 13^2 \right) \\
+  &=& \SI{3.88}{fm}
+  \eeqn
+\end{Answer}
+
+\begin{Exercise}[title={Differenza di massa tra nuclei di un multipletto di isospin}]
+  I nuclei di \ce{^{90}_{40}Zr} e \ce{^{90}_{39}Y} appartengono allo stesso multipletto di isospin.
+  \Question Si stimi la differenza di massa tra i due nuclei.
+\end{Exercise}
+\begin{Answer}
+  La differenza di massa tra due membri dello stesso multipletto di
+  isospin \`e dovuta solamente alla differenza di energia
+  elettrostatica (termine Coulombiano della formula
+  \textit{semi-empirica} delle masse di Bethe-Weizs{\"a}cker) e dalla differenza
+  di massa tra il neutrone e il protone.
+
+  Quindi, chiamando $Z$ il numero atomico del nucleo pi\`u leggero
+  (\ce{^{90}_{39}Y}), e con $U$ l'energia elettrostatica di un nucleo,
+  si ha che la differenza di massa cercata \`e uguale alla differnza
+  di energie dei due nuclei:
+  \beqn
+  \Delta M &=& E(A,Z+1)-E(A,Z) = \Delta U - (m_n - m_p)c^2 \\
+  &=& \frac{3e^2}{5R}(2Z-1) - \SI{0.780}{MeV} = \frac{3(2Z+1)\hbar c}{5R}\times\frac{1}{137} -  \SI{0.780}{MeV}
+  \eeqn
+  Usiamo come stima del raggio nucleare:
+  \[
+  R\approx1.2\times A^{1/3}\SI{}{fm} = 1.2 \times 90^{1/3}\SI{}{fm} \approx \SI{5.38}{fm} 
+  \]
+  da cui:
+  \beqn
+  \Delta M &=& \frac{3(2\times 39\times 39+1)\times \SI{197}{MeV\cdot fm}}{5\times\SI{5.38}{fm}\times 137} - \SI{0.780}{MeV} \\
+  &=& \SI{11.89}{MeV}
+  \eeqn
+\end{Answer}
+
+\begin{Exercise}[title={Densit\`a di massa nucleare}]
+  Stimare la densit\`a di massa nucleare (in \SI{}{g/cm^3}), approssimando il nucleo come
+  una sfera con massa distribuita uniformemente e trascurando la
+  differenza di massa tra protone e neutrone.
+\end{Exercise}
+\begin{Answer}
+  Se si approssima la massa del neutrone a quella del protone: $m_n=m_p$, e il raggio del nucleo come:
+  \[
+  R = R_0 \times A^{1/3} \approx \SI{1.2}{MeV\cdot fm} \times A^{1/3}
+  \]
+  che \`e una buona approssimazione a grandi valori di $A$, si ottiene, per la densit\`a di una sfera
+  con massa distriuita uniformemente:
+  \beqn
+  \rho &=& \frac{M}{V} = \frac{A\cdot m_p}{4/3 \pi R_0^3 A} = \frac{3 m_p}{4\pi R_0^3} \\
+  &=& \frac{3\times\SI{1.67e-24}{g}}{12.56\times (\SI{1.2e-13}{cm})^3} \approx \SI{2.3e14}{g/cm^3}
+  \eeqn
+\end{Answer}
+
+\begin{Exercise}[title={Catena di decadimenti radioattivi ed equilibrio secolare}]
+  Si consideri la seguente catena di decadimenti radioattivi:
+  \[
+  \ce{^{244}Pu} \to \ce{^{240}U} \to \ce{^{240}Np} \to \ce{^{240}Pu}
+  \]
+  I tempi di dimezzamento dei nuclei che decadono sono $t^{1/2}(\ce{^{244}Pu})=\SI{81e6}{anni}$,
+  $t^{1/2}(\ce{^{240}U})=\SI{14}{ore}$ e $t^{1/2}(\ce{^{240}Np})=\SI{67}{min}$. Se, in un certo momento, si ha a disposizione
+  una massa di \SI{1}{g} di \ce{^{244}Pu} puro, si determini:
+
+  \Question quanti nuclei di \ce{^{240}U} e  \ce{^{240}Np} saranno presenti dopo 1 mese;
+  \Question qual \`e il tipo di radioattivit\`a di ciascun decadimento;
+  \Question qual \`e l'attivit\`a del primo decadimento.
+  
+\end{Exercise}
+
+\begin{Answer}
+  \begin{enumerate}
+  \item Detti $\tau_1$ e $N_1$ vita media e numero di \ce{^{244}Pu} al
+    tempo $t$, $\tau_2$ e $N_2$ vita media e numero di \ce{^{240}U} e
+    $\tau_3$ e $N_3$ vita media e numero di \ce{^{240}Np}, si ha
+    $\tau_1 \gg \tau_2 , \tau_3$. Inoltre, se $t$ \`e il tempo della
+    misura ($t=\SI{30}{giorni}$), si ha anche $t \gg \tau_2 , \tau_3$.
+
+    In queste condizioni, vale la relazione dell'\textit{equilibrio secolare}:
+    \[
+    \frac{N_1}{\tau_1} \approx \frac{N_2}{\tau_2} \approx \frac{N_3}{\tau_3}
+    \]
+    Poich\'e $N_1=N_A$, si ha, per il numero di nuclei di \ce{^{240}U}:
+    \beqn
+    N(\ce{^{240}U}) &=& N_2 = \frac{\tau_2}{\tau_1}\cdot N_1 = \frac{t^{(1/2)}_2}{t^{(1/2)}_1}\cdot N_A \\
+    &\approx& \frac{\SI{14}{ore}}{\SI{8.1e7}{} \times 365 \times \SI{24}{ore}} \cdot \SI{6e23}{} \\
+    &\approx& \SI{1.2e13}{}
+    \eeqn
+    analogamente per i nulcei di \ce{^{240}Np}:
+    \beqn
+    N(\ce{^{240}Np}) &=& N_3 = \frac{\tau_3}{\tau_1}\cdot N_1 = \frac{t^{(1/2)}_3}{t^{(1/2)}_1}\cdot N_A \\
+    &\approx& \frac{\SI{67}{min}}{\SI{8.1e7}{} \times 365 \times 24 \times \SI{60}{min}} \cdot \SI{6e23}{} \\
+    &\approx& \SI{9.4e11}{}
+    \eeqn
+
+  \item    I decadimenti in oggetto sono:
+    \beqn
+    \ce{^{244}Pu} &\rightarrow& \ce{^{240}U} + \alpha \\
+    \ce{^{240}U}  &\rightarrow& \ce{^{240}Np} + e^- + \bar{\nu}_e \\
+    \ce{^{240}Np} &\rightarrow& \ce{^{240}Pu} + e^- + \bar{\nu}_e
+    \eeqn
+    
+  \item L'attivit\`a misurata nel decadimento $\alpha$ sar\`a:
+    \beqn
+    A &=& \left| \dv{N_1}{t} \right| \approx \frac{N_1}{\tau_1} = \frac{N_1 \ln 2}{t^{(1/2)}_1} \\
+    &\approx& \frac{6e23\times 0.69}{\SI{8.1e7}{} \times 365 \times 24 \times \SI{3600}{s}} \approx \SI{1.6e8}{s^{-1}} = \SI{160}{MHz}
+    \eeqn
+    
+  \end{enumerate}
+\end{Answer}
+
+\begin{Exercise}[title={Decadimento $\alpha$}]
+  Nello spettro del decadimento $\alpha$ del $\ce{^{240}Pu}\to\ce{^{236}U}+\alpha$ si osservano due righe, corrispondenti alle
+  energie cinetiche delle particelle $\alpha$ a \SI{5.17}{MeV} e \SI{5.12}{MeV}.
+  \Question Si determinino i Q-valori dei due decadimenti.
+  \Question La riga meno energetica corrisponde al decadimento in un livello eccitato \ce{^{236}U^*} che si diseccita al livello
+  fondamentale con emissione $\gamma$. Determinare l'energia dei $\gamma$ emessi.
+\end{Exercise}
+\begin{Answer}
+  \begin{enumerate}
+  \item  Chiamiamo $X$ il nucleo genitore che decade $\alpha$ e $Y$ il nucleo
+    figlio.  Nel sistema di riferimento di $X$ la conservazione di
+    energia e impulso si scrive:
+    \[
+    \begin{cases}
+      M_X c^2 = M_Y c^2 + M_X c^2 + K_Y + K_\alpha \\
+      \vec p_X + \vec p_Y = 0
+    \end{cases}
+    \]
+    dove abbiamo indicato con $K_Y$ e $K_\alpha$ le energie cinetiche
+    del nucleo figlio e della particella $\alpha$. Dalla conservazione
+    dell'impulso si ha $\vert\vec p_X\vert = \vert\vec p_Y\vert \equiv
+    p$. Dalla conservazione dell'energia:
+    \beqn
+    (M_X - M_Y - M_\alpha)c^2 \equiv Q &=& \frac{p^2}{2M_Y} + \frac{p^2}{2M_\alpha} = \frac{p^2}{2M_\alpha}\left[ 1+\frac{M_\alpha}{M_Y} \right] \\
+    &=& K_\alpha\left[ 1+\frac{M_\alpha}{M_Y} \right]
+    \eeqn
+    Da questa relazione otteniamo l'energia cinetica della particella $\alpha$, usando l'espansione al
+    prim'ordine in $\epsilon=M_\alpha/M_Y$, che vale per valori di $A$ grandi:
+    \begin{equation}
+      \label{eqn:QvalKalpha}
+      K_\alpha = \frac{Q}{1+\frac{M_\alpha}{M_Y}} \approx Q\left(1-M_\alpha/M_Y\right) \approx Q\left(1-\frac{4}{A}\right)
+    \end{equation}
+    Con lo stesso approccio si ricaverebbe l'energia cinetica corrispondente al rinculo del nucleo figlio:
+    \[
+    Q = \frac{p^2}{2M_Y}\left[ 1+\frac{M_Y}{M_\alpha} \right] = K_Y \left[ 1 + \frac{1}{M_\alpha/M_Y}\right] = K_Y \frac{1+M_\alpha/M_Y}{M_\alpha/M_Y}
+    \]
+    da cui si ottiene:
+    \begin{equation}
+      \label{eqn:QvalKY}
+      K_Y = Q  \frac{M_\alpha/M_Y}{1+M_\alpha/M_Y} \approx Q \frac{M_\alpha}{M_Y}\left[1-\frac{M_\alpha}{M_Y}\right] \approx Q\frac{M_\alpha}{M_Y} \approx Q\frac{4}{A}
+    \end{equation}
+    in cui abbiamo usato la stessa espensione al prim'ordine del
+    deonominatore e tenuto solo il termine di ordine 1 in
+    $\epsilon=M_\alpha/M_Y$ del prodotto. Da qui si vede che per $A$
+    grande, $K_\alpha \gg K_Y$, cio\`e il rinculo del nucleo figlio \`e
+    piccolo rispetto a quello dell'$\alpha$.
+
+    Dall'eq.~\ref{eqn:QvalKalpha} si ottiene:
+    \[
+    Q \approx \frac{K_\alpha}{1-4/A} = \frac{A}{A-4} K_\alpha
+    \]
+    quindi numericamente:
+    \beqn
+    Q_1 \approx \frac{240}{236} \times \SI{5.17}{MeV} = \SI{5.26}{MeV} \\
+    Q_2 \approx \frac{240}{236} \times \SI{5.12}{MeV} = \SI{5.21}{MeV}
+    \eeqn
+
+  \item L'energia del $\gamma$ emesso \`e uguale alla differenza dei
+    due Q-valori, quindi tra $Q_1(\ce{^{240}Pu}\to\ce{^{236}U})$ e
+    $Q_2(\ce{^{240}Pu}\to\ce{^{236}U^*})$, quindi:
+    \[
+    E_\gamma = Q_1 - Q_2 = \SI{0.05}{MeV} = \SI{50}{keV}
+    \]
+  \end{enumerate}
+  
+\end{Answer}
+
+
+\begin{Exercise}[title={Decadimenti permessi e proibiti}]
+Stabilire quali delle seguenti reazioni sono possibili dandone la  motivazione:
+\begin{itemize}
+\item{$K^{-} + p \to \Omega^{-} + K^{+} + K^{0} $}
+\item{$\psi \to \pi^+ + \pi^0 + \pi^-$}
+\item{$\pi^- + p \to \Sigma^+ + K^-$}
+\item{$\pi^- + p \to \pi^0 + \pi^0 $}
+\item{$p + p \to n + \Delta^{++} + p + \bar{p}$}
+\end{itemize}
+\end{Exercise}
+\begin{Answer}
+  Le reazioni in esame sono tutte dovute all'interazione forte pertanto si 
+  ha la conservazione dei seguenti numeri quantici: carica elettrica $C$,
+  numero barionico $B$, numero leptonico $L$, stranezza $S$ ed isospin $I_3$.
+  Le reazioni proposte nell'esercizio sono rispettivamente:
+  
+  \begin{itemize}
+  \item{$K^{-} + p \to \Omega^{-} + K^{+} + K^{0} $: possibile}
+  \item{$\psi \to \pi^+ + \pi^0 + \pi^-$: possibile}
+  \item{$\pi^- + p \to \Sigma^+ + K^-$: impossibile, viola la conservazione di $S$}
+  \item{$\pi^- + p \to \pi^0 + \pi^0 $: impossibile, viola la conservazione di $B$}
+  \item{$p + p \to n + \Delta^{++} + p + \bar{p}$: possibile}
+  \end{itemize}
+
+\end{Answer}
+
+\begin{Exercise}[title={Simmetrie discrete in transizioni nucleari}]
+L'energia di legame dei nuclei \ce{^4_2He} e \ce{^7_3Li} \`e \SI{28.3}{MeV} e
+\SI{39.3}{MeV} rispettivamente. Si consideri la reazione $p + \ce{^7_3Li} \to\ce{^4_2He} + \ce{^4_2He}$.
+
+\Question Verificare se la reazione \`e esotermica  ($Q>0$) o endotermica ($Q < 0$).
+
+\Question Calcolare l'energia minima del protone perch\'e la reazione avvenga.
+
+\Question Lo stato di spin-parit\`a del nucleo \ce{^7_3Li} \`e
+$J^P=(3/2)^-$.  Calcolare il valore del momento angolare orbitale
+iniziale, assumendo che quello finale sia nullo.
+\end{Exercise}
+
+\begin{Answer}
+  \begin{enumerate}
+
+    \item La reazione  $p + \ce{^7_3Li} \to\ce{^4_2He} + \ce{^4_2He}$ ha un Q-valore pari a:
+      \beqn
+      Q &=& M_p + M_{\ce{Li}} - 2 M_\alpha = M_p + [3 M_p + 4 M_n - B(\ce{^7_3Li})] - 2 [2 M_p + 2 M_n - B(\alpha)] = \\
+      &=& 2 B(\alpha) - B(\ce{^7_3Li}) = 2 \cdot \SI{28.3}{MeV} - \SI{39.3}{MeV} = \SI{17.3}{MeV} > 0
+      \eeqn
+      La reazione \`e quindi esotermica.
+
+      \item L'energia minima richiesta \`e dovuta alla barriera
+        coulombiana. Assumendo il raggio del protone trascurabile in
+        confronto a quello del \ce{^7_3Li} (che stimiamo come
+        $R(\ce{^7_3Li})=R_0 A^{1/3} \approx \SI{1.2}{fm} A^{1/3}$), si
+        ha:
+        \[
+        K_{min} = \frac{z Z e^2}{4 \pi \epsilon_0 d} =  \frac{z Z \alpha \hbar c}{R(\ce{^7_3Li})} = 
+        \frac{3\cdot \SI{197}{MeV fm}}{137 \cdot \SI{1.2}{fm}\cdot 7^{1/3}} \approx \SI{1.9}{MeV}
+        \]
+        
+        \item Indicando i valori di spin-parit\`a dei nuclei coinvolti nella reazione si ha:
+          \[
+          p\left(\frac{1}{2}^+\right) + \ce{^7_3Li}\left(\frac{3}{2}^-\right) \to \ce{^4_2He}(0^+) + \ce{^4_2He}(0^+)
+          \]
+          Sapendo che il momento angolare orbitale dello stato finale \`e nullo, tale deve essere anche
+          il momento angolare totale finale. Pertanto la conservazione del momento angolare impone:
+          \[
+          \frac{1}{2} \oplus \frac{3}{2} \oplus L_i = 0
+          \]
+          avendo indicato con $\oplus$ l'operazione di addizione dei momenti angolari e con $L_i$
+          il momento angolare orbitale iniziale. Poich\'e $\frac{1}{2} \oplus \frac{3}{2} = 1,2$, 
+          ne segue che anche $L_i$ pu\`o assumere i valori 1 o 2.
+
+          La conservazione della parit\`a, a sua volta, impone che la parit\`a dello stato iniziale sia 
+          uguale a quella finale, cio\`e sia +1. Sapendo che la parit\`a del protone \`e +1, si ha allora: 
+          \[
+          P_i = P(p) \times P(\ce{^7_3Li}) \times  P_{orb} = (+1) \times (-1) \times (-1)^{L_i}
+          \]
+          da cui segue che $L_i$ deve essere dispari. Quindi risulta $L_i = 1$.
+  \end{enumerate}
+\end{Answer}
