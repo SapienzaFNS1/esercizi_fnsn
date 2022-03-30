@@ -138,3 +138,106 @@ e il numero di particelle visto dal rivelatore vale, se indichiamo con $n_{Al}=\
       \eeqn
   \end{enumerate}
 \end{Answer}
+
+\begin{Exercise}[title={Sezione d'urto e unit\`a di misura}]
+  La sezione d'urto integrata del processo $e^+e^-\to\gamma\to\mu^+\mu^-$ vale approssimativamente:
+  \[
+  \sigma = \frac 4 3 \frac{\pi\alpha^2}{s}
+  \]
+  dove $\sqrt{s}$ \`e l'energia disponibile nel centro di massa.
+
+  \Question{Quanto vale tale sezione d'urto, in barn, all'energia di produzione della particella $Z^0$ ($m_{Z^0}=\SI{91.2}{GeV/c^2}$)?}
+\end{Exercise}
+\begin{Answer}
+  La sezione d'urto si calcola con la formula data, usando il valore della costante di struttura fineL $\alpha=1/137$:
+  \[
+  \sigma = \frac 4 3 \times 3.14 \times \left(\frac{1}{137}\right)^2 \times \frac{1}{(\SI{91.2}{GeV})^2} \approx \SI{2.7e-8}{GeV^{-2}}
+  \]
+  Ora dobbiamo convertire dalle unit\`a naturali ($\hbar=c=1$) a SI per ottenerla in barn:
+  \begin{itemize}
+  \item 1 barn = \SI{1e-24}{cm^2}
+  \item $[\hbar c] = [E][L] \approx \SI{197}{MeV}{fm}$
+  \end{itemize}
+  e quindi:
+  \beqn
+  \sigma &=& \SI{2.7e-8}{GeV^{-2}} \cdot (\SI{0.197}{GeV}\times\SI{1e-15}{m})^2 = \SI{2.7e-8}{} \cdot \SI{4e-2} \cdot \SI{1e-30}{m^2} \\
+  &=& \SI{1e-35}{cm^2} = \SI{1e-11}{barn} = \SI{10}{pb}
+  \eeqn
+\end{Answer}
+
+
+\begin{Exercise}[title={Decadimenti e tempo proprio}]
+Calcolare l'impulso di un pione $\pi^+$ che ha la stessa velocit\`a di
+un protone di impulso p$_p$ = \SI{400}{GeV/c}.  Tale \`e l'impulso
+pi\`u probabile dei pioni che vengono prodotti al Fermilab di Chicago,
+inviando un fascio di protoni di \SI{400}{GeV/c} su un bersaglio
+sottile, \`e Una volta prodotti i pioni entrano in un tunnel di
+lunghezza x=\SI{400}{m} in cui alcuni decadono.
+
+\Question{Calcolare la frazione dei pioni che decadono nel tunnel,
+  sapendo che il tempo di vita medio proprio dei pioni carichi \`e
+  $\tau_{0}$($\pi$).}
+
+\Question{Calcolare la lunghezza del tunnel misurata da un osservatore  solidale al pione}
+
+[Dati: $m_{\pi}=\SI{139.6}{MeV/c^2}$, $m_{p}=\SI{0.938}{GeV/c^2}$, $\tau_{0}(\pi)\approx\SI{2.6e-8}{s}$]
+\end{Exercise}
+
+\begin{Answer}
+  
+  Per un protone di impulso p$_p$ 
+  \[
+  \beta \gamma = \frac{p_p}{c m_p} = \frac{p_p c}{m_p c^2} = 426
+  \]
+  Un pione con lo stesso $\beta \gamma$ ha impulso 
+  \[
+  p_{\pi} = m_{\pi} c \beta \gamma = \SI{59.5}{GeV/c}
+  \]
+  
+  \begin{enumerate}
+  \item  La frazione di pioni che decadono nel tunnel \`e 
+    \[
+    1 - \frac{N(x)}{N_0} = 1 - e^{-\frac{x}{\beta \gamma c \tau_0}} = 11.3\%
+    \]
+    
+  \item Dato che 
+    \[
+    \beta^2 = 1 - \frac{1}{\gamma^2}
+    \]
+    
+    \[
+    (\beta \gamma)^2 = \gamma^2 -1
+    \]
+    
+    \[
+    \gamma = \sqrt{(\beta \gamma)^2 +1} \simeq \beta \gamma = 426
+    \]
+    
+    La lunghezza del tunnel, misurata da un osservatore solidale al pione \`e 
+    \[
+    x' = \frac{x}{\gamma} = \frac{\SI{400}{m}}{426} = \SI{94}{cm}
+    \]
+
+  \end{enumerate}
+\end{Answer}
+
+
+\begin{Exercise}[title={Decadimenti e tempo proprio}]
+  Una particella X prima di decadere percorre nel laboratorio un tratto $L=\SI{20}{cm}$.
+  Sapendo che l'impulso e la massa della particella sono $p_X=\SI{1}{GeV/c}$ e $m_X=\SI{1.1}{GeV/c^2}$
+  calcolare il tempo di vita proprio della particella.
+\end{Exercise}
+\begin{Answer}
+Nel laboratorio:
+\[
+L=v\tau=\beta c \gamma\tau_0=\beta \gamma c\tau_0
+\]
+e:
+\[
+\beta \gamma = \frac{p}{mc} = \frac{pc}{mc^2} = \SI{1}{GeV} / \SI{1.1}{GeV} = 0.91
+\]
+Quindi:
+\[
+\tau_0 = \frac{L}{\beta \gamma c}=\SI{7.3e-10}{s}
+\]
+\end{Answer}
