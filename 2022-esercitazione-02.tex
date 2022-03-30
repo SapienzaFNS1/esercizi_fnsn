@@ -1,0 +1,140 @@
+%%%%%%%%%%%%%%%%%%%%%%%%
+%%% ESERCITAZIONE 2
+%%% FATTA IL 29/03/2022
+%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{Exercise}[title={Scattering Rutherford}]
+Un fascio di particelle $\alpha$ di \SI{100}{MeV} di energia e
+\SI{0.32}{nA} di corrente\footnote{Per una spiegazione breve su come
+  (e perché) si misura la corrente di un fascio di particelle, vedi
+  \url{https://www.lhc-closer.es/taking_a_closer_look_at_lhc/0.beam_current}. Una
+  trattazione più completa è data ad esempio da
+  \url{https://cds.cern.ch/record/1213275/files/p141.pdf}.} collide
+contro un bersaglio fisso di alluminio, spesso \SI{1}{cm}. Si pone un
+rivelatore di $\SI{1}{cm}\times\SI{1}{cm}$ di superficie ad un angolo
+di \ang{30} rispetto al fascio di particelle, a \SI{1}{m} di distanza
+dal bersaglio. Quante particelle $\alpha$ incideranno sul rivelatore
+ogni secondo?
+\end{Exercise}
+\begin{Answer}
+L'alluminio ha una densità di \SI{2.7}{g/cm^3}, numero atomico $13$ e massa atomica \SI{27}{u}.
+
+Poiché le particelle $\alpha$ sono nuclei di elio, hanno carica $2e$ e la corrente di \SI{0.32}{nA} corrisponde a un miliardo di particelle incidenti al secondo,
+\[
+\dv{N_i}{t}=\frac{\SI{0.32}{nC/s}}{2\times\SI{1.6e-19}{C}} = \SI{1e9}{s^{-1}}.
+\]
+
+Il rivelatore vede un angolo solido di
+\[
+\Delta\Omega\equiv \frac{\text{superficie}}{\text{raggio}}^2 = \frac{\SI{1}{cm^2}}{(\SI{1}{m})^2} = \SI{1e-4}{sr}
+\]
+
+Si tratta di uno scattering alla Rutherford, per cui la sezione d'urto per unità di angolo solido rilevata ad un certo angolo $\theta$ vale
+\[
+\dv{\sigma}{\Omega} = \left(\frac{z_{\alpha}z_{Al}e^2}{4\pi\epsilon_04E}\frac{1}{\sin^2(\theta/2)}\right)^2,
+\]
+pari a
+\begin{equation}\begin{split}
+\dv{\sigma}{\Omega} \approx \left(\frac{2\times13\times4\times e\times\SI{1.6e-19}{C}}{4\pi\times\SI{8.9e-12}{F/m}\times4\times\SI{100e6}{eV}}\frac{1}{\sin^2(\pi/\ang{180}\times\ang{30}/2)}\right)^2\\
+\approx \SI{2e-30}{m^2/sr}=\SI{20}{mb/sr},
+\end{split}\end{equation}
+e il numero di particelle visto dal rivelatore vale, se indichiamo con $n_{Al}=\rho_{Al}\frac{N_A}{A_{Al}}$ la densità numero di atomi di alluminio, e con $d$ lo spessore del rivelatore,
+\begin{equation*}
+\begin{split}
+&\dv{N_\text{rivelate}}{t}=\Delta\Omega\dv{\sigma}{\Omega}n_{Al}d \dv{N_\text{i}}{t}\\ 
+&\approx\SI{1e-4}{sr}\times \SI{2e-30}{m^2/sr} \times \SI{1e4}{cm^2/m^2}  \times \SI{2.7}{g/cm^3} \frac{\SI{6e23}{mol^{-1}}}{\SI{27}{g/mol}}\\&= \SI{120}{Hz}.
+\end{split}
+\end{equation*}
+\end{Answer}
+
+\begin{Exercise}[title={Sezione d'urto}]
+  L'interazione $\nu_{mu}+n\to\mu^-p$ viene studiata con un flusso totale di particelle incidenti di
+  $\Phi=\SI{1e15}{particelle/m^2}$ su un bersaglio di massa $m=\SI{15e3}{kg}$ di \ce{Fe} (A=\SI{56}{g/mol} e Z=26).
+  Nel rivelatore si osservano 160 eventi.
+
+  \Question{Ricavare la sezione d'urto del processo}
+\end{Exercise}
+\begin{Answer}
+  Usiamo la proporzionalit\`a tra il flusso incidente e il numero di reazioni $N_r$:
+  \[
+  \sigma = \frac{N_r}{N_f} \times \frac{1}{n_{n} d}
+  \]
+  dove $n_n$ \`e il numero di neutroni per unit\`a di volume nel materiale attraversato e $d$ lo spessore del bersaglio.
+  \[
+  \sigma = \frac{N_r}{\Phi\times S} \times \frac{S}{S d n_n} = \frac{N_r}{\Phi} \times \frac{1}{N_n}
+  \]
+  dove abbiamo indicato con $N_n=S d n_n$ il numero totale di neutroni illuminati dal fascio di neutrini.
+
+  Dobbiamo ora calcolare $N_n$ a partire dalle caratteristiche del bersaglio di \ce{Fe}. Il numero di atomi si ricava a partire dal numero di atomi per unit\`a di volume $n_a$:
+  \[
+  N_{\rm atomi} = {n_a} \times V = \left( \frac{\rho N_A}{A} \right)\times V
+  \]
+  dove $\rho$, $A$ sono la densit\`a e il numero atomico del \ce{Fe},
+  rispettivamente, e $N_A=\SI{6e23}{atomi/mol}$ \`e il numero di
+  Avogadro. Da qui il numero di neutroni \`e:
+  \beqn
+  N_n &=& (A-Z) \times N_{\rm atomi } = \frac{(A-Z) N_A}{A} \times \rho \times V =  \frac{(A-Z) N_A}{A} M_{\ce{Fe}} \\
+  &=& \frac{30}{\SI{56}{g/mol}} \times 6 \times \SI{6e23}{atomi/mol} \times \SI{15e6}{g} \approx \SI{5e30}{}
+  \eeqn
+  Da cui si ricava la sezione d'urto:
+  \beqn
+  \sigma &=& \frac{160}{\SI{5e30}{}} \times \frac{1}{\SI{1e11}{cm^{-2}}} \approx \SI{3.2e-40}{cm^2} \\
+  &=& \SI{3.2e-16}{b}
+  \eeqn
+\end{Answer}
+
+\begin{Exercise}[title={Coefficiente di assorbimento}]
+  Un fascio di raggi X monocromatici, costituiti da fotoni di energia $E_\gamma=\SI{40}{keV}$, viene
+  fatto incidere su una lamnina di \ce{Fe} (A=\SI{56}{g/mol} e $\rho=\SI{7.9}{g/cm^3}$. La lamina assorbe
+  i fotoni con una sezione d'urto $\sigma=\SI{300}{b/atomo}$ per effetto fotoelettrico.
+
+  \Question{Calcolare il coefficiente di assorbimento}
+  \Question{Lo spessore della lamina necessario per diminuire di un fattore 10 il flusso dei fotoni}
+\end{Exercise}
+
+\begin{Answer}
+  \begin{enumerate}
+    \item
+      Il coefficiente di assorbimento \`e definito dalla variazione del flusso di particelle incindenti nel mezzo
+      in uno spessore $x$:
+      \[
+      \Phi(x) = \Phi_0 e^{-\mu x}
+      \]
+      Notare che il coefficiente di assorbimento ha le dimensioni di una lunghezza, e quindi si definisce anche
+      la lunghezza di attenuazione come:
+      \[
+      \lambda \equiv \frac{1}{\mu}
+      \]
+      con cui a volte si scrive la variazione del flusso:
+      \[
+      \Phi(x) = \Phi_0 e^{-x/\lambda}
+      \]
+      in una lunghezza di attenuazione il fascio incidente si riduce ad una intensit\`a $1/e$ rispetto a quella iniziale.
+      
+      Nel nostro caso:
+      \[
+      \mu = \sigma_r \cdot n_b
+      \]
+      dove $n_b$ \`e il numero di atomi bersaglio della lamina di \ce{Fe}. Quindi:
+      \beqn
+      \mu &=& \sigma \times \frac{N_A}{A} \rho_{\ce{Fe}} = \SI{300e-24}{cm^2} \times \frac{\SI{6e23}{mol^{-1}}}{\SI{56}{gmol^{-1}}} \times \SI{7.9}{g/cm^3} \\
+      &\approx& \SI{25}{cm^{-1}}
+      \eeqn
+
+    \item
+      Dato il coefficiente di assorbimento, si trova come varia il
+      flusso di particelle mentre attraversa uno spessore $x=L$ nel
+      mezzo:
+      \[
+      \frac{\Phi(L)}{\Phi_0} = e^{-x/\lambda} = \frac{1}{10}
+      \]
+      e quindi usando
+      \[
+      \lambda = \frac{1}{\mu} = \frac{1}{25}\SI{}{cm}
+      \]
+      si ha:
+      \beqn
+      -\frac{L}{\lambda} &=& \ln(1/10) \\
+      L &=& \lambda \ln (1/10) = -\frac{1}{25} \times (-\SI{23}{cm}) \approx \SI{0.1}{cm}
+      \eeqn
+  \end{enumerate}
+\end{Answer}
